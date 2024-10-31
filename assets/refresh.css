@@ -1,0 +1,115 @@
+.refresh{
+    position: relative;
+    color: white;
+    overflow: hidden;
+}
+
+.refresh__container{
+    position: relative;
+    z-index: 1;
+    padding-top: 9.44rem;
+    padding-bottom: 24.33rem;
+}
+
+.refresh__bg{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.refresh__bg img{
+    
+    min-width: 106.66rem;
+    min-height: 61.33rem;
+}
+
+.refresh__subtext{
+    margin-left: 6rem;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 1.242px;
+}
+
+.refresh__subheading{
+    font-family: 'Coolvetica';
+    font-size: 4rem;
+    letter-spacing: -0.044rem;
+    text-transform: uppercase;
+}
+
+.refresh__heading{
+    font-family: 'Coolvetica';
+    font-size: 22.37rem;
+    letter-spacing: -0.246rem;
+    font-weight: 900;
+    text-transform: uppercase;
+    margin-top: -5.15rem;
+}
+
+.refresh__cloud{
+    position: absolute;
+    width: 47.5rem;
+    z-index: 2;
+    left: 49.35%;
+    bottom: 16.2%;
+    transform: translateX(-50%);
+}
+
+.refresh__cloud img{
+    width: 100%;
+}
+
+.refresh__smile{
+    width: 45.5rem;
+    right: -4rem;
+    bottom: -13.83rem;
+    z-index: 2;
+}
+
+.refresh__smile img{
+    max-width: 100%;
+}
+
+.refresh__flower{
+    width: 28.67rem;
+    left: -3.94rem;
+    bottom: -12.11rem;
+}
+
+.refresh__flower img{
+    max-width: 100%;
+}
+
+.refresh__batterfly{
+    width: 15.55rem;
+
+}
+
+.refresh__batterfly-1{
+    transform: rotate(103.35deg);
+    top: 26.67rem;
+    left: 6.05rem;
+    z-index: 2;
+}
+
+.refresh__batterfly-2{
+    transform: rotate(43.4deg);
+    top: 35rem;
+    left: 20.44rem;
+}
+
+.refresh__batterfly img{
+    max-width: 100%;
+}
+
+
+.refresh__emberix{
+    position: absolute;
+    bottom: 25.38rem;
+    right: 16.44rem;
+    color: var(--pink-main);
+    z-index: 2;
+    font-size: 14px;
+}

@@ -1,0 +1,97 @@
+<link rel="stylesheet" href="{{ 'value.css' | asset_url }}" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="{{ 'value-mobile.css' | asset_url }}" media="print" onload="this.media='all'">
+
+<section class="value">
+  <div class="value__container _container">
+    <img src="{{ section.settings.present_image | img_url: 'master' }}" alt="" class="value__present">
+    <div class="value__content">
+      <h2 class="value__heading">
+        <span class="value__heading-part"><span>{{ section.settings.heading_part_1 }}</span> {{ section.settings.heading_part_2 }}</span>
+        <span class="value__heading-part"><span>{{ section.settings.heading_part_3 }}</span> {{ section.settings.heading_part_4 }}</span>
+      </h2>
+      <span class="value__off">
+        {{ section.settings.discount_text }}
+      </span>
+      <footer class="value__footer">
+        <div class="value__subscription">
+          <img src="{{ 'subsccription-icon.svg' | asset_url }}" alt="">
+          <p>{{ section.settings.subscription_text }}</p>
+        </div>
+        <a href="{{ section.settings.button_link }}" class="value__button button button_animated button_white">
+          <p class="button__name">
+            {{ section.settings.button_text }}
+          </p>
+          <div class="button__jumper"></div>
+          <div class="button__icon">
+            <img src="{{ 'button-icon.svg' | asset_url }}" alt="">
+          </div>
+        </a>
+      </footer>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Value Section",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "present_image",
+      "label": "Present Image"
+    },
+    {
+      "type": "text",
+      "id": "heading_part_1",
+      "label": "Heading Part 1",
+      "default": "You value"
+    },
+    {
+      "type": "text",
+      "id": "heading_part_2",
+      "label": "Heading Part 2",
+      "default": "our product,"
+    },
+    {
+      "type": "text",
+      "id": "heading_part_3",
+      "label": "Heading Part 3",
+      "default": "we value"
+    },
+    {
+      "type": "text",
+      "id": "heading_part_4",
+      "label": "Heading Part 4",
+      "default": "your loyalty"
+    },
+    {
+      "type": "text",
+      "id": "discount_text",
+      "label": "Discount Text",
+      "default": "20% OFF"
+    },
+    {
+      "type": "text",
+      "id": "subscription_text",
+      "label": "Subscription Text",
+      "default": "With subscription for <span>20/30/45 days</span>"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button Text",
+      "default": "Shop now"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button Link"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Value Section"
+    }
+  ]
+}
+{% endschema %}

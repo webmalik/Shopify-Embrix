@@ -1,0 +1,45 @@
+.slider-button {
+    width: 64px;
+    height: 64px;
+    background-color: white;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.slider-button:hover {
+    background-color: var(--pink-main);
+}
+
+.slider-button img {
+    width: 16px;
+    position: absolute;
+    opacity: 1;
+    transition: all 0.3s ease;
+}
+
+.slider-button img:last-child {
+    opacity: 0;
+    display: none;
+    transform: rotate(180deg);
+}
+
+.slider-button:hover img:last-child {
+    display: block;
+    opacity: 1;
+}
+
+.slider-button:hover img:first-child {
+    display: none;
+    opacity: 0;
+}
+
+@media (max-width: 480px) {
+    .slider-button {
+        width: 60px;
+        height: 60px;
+    }
+}

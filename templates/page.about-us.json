@@ -1,0 +1,66 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-about",
+      "settings": {
+        "about_subtitle": "We’re inspired by the resilience and versatility of mushrooms.",
+        "about_text": "These little guys can thrive in the wildest of places, kind of like your favorite uncle who somehow survives on camping trips with just a pocketknife and a can of beans. Mushrooms have been used for centuries in various cultures for their health benefits, and we’re here to continue that tradition with a modern twist.",
+        "about_image_desctop": "shopify:\/\/shop_images\/about-desctop.png",
+        "about_image_mobile": "shopify:\/\/shop_images\/about-mobile.png"
+      }
+    },
+    "section_ember_cbem8Q": {
+      "type": "section-ember",
+      "settings": {
+        "ember_logo": "shopify:\/\/shop_images\/emberix-about_e101e717-5b60-484b-8ede-5543e3fe9d5c.svg",
+        "ember_logo_label": "what does it mean?",
+        "meaning_text": "<span>The name \"Emberix\" comes from the word \"ember,\" symbolizing hidden energy and warmth.<\/span> Combined with the suffix \"-ix,\" which adds a sense of dynamism and innovation, the name reflects the company's mission to ignite new ideas and inspiration. Emberix is the spark that fuels creativity and innovation in the supplement industry",
+        "energy_text": "ENERGY",
+        "inspiration_text": "Inspiration"
+      }
+    },
+    "section_about_values_aqpFAP": {
+      "type": "section-about-values",
+      "blocks": {
+        "value_item_qNgPwq": {
+          "type": "value_item",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/icon-1.svg",
+            "title": "Quality from Nature",
+            "text": "We don't just aim for good, we strive for exceptional. Our products are crafted with the highest quality standards using 100% natural, eco-friendly, and sustainably sourced ingredients and we're not going to change that"
+          }
+        },
+        "value_item_Qb7URq": {
+          "type": "value_item",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/icon-2.svg",
+            "title": "Innovation and Improvement",
+            "text": "We never settle. We’re constantly researching, innovating, and improving our products to bring you the best the world of supplements has to offer"
+          }
+        },
+        "value_item_3bDUy7": {
+          "type": "value_item",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/icon-3.svg",
+            "title": "A Dash of Fun",
+            "text": "Health and wellness should be enjoyable! We infuse a bit of humor and fun into everything we do because a smile a day keeps the doctor away (or something like that)"
+          }
+        }
+      },
+      "block_order": [
+        "value_item_qNgPwq",
+        "value_item_Qb7URq",
+        "value_item_3bDUy7"
+      ],
+      "settings": {
+        "header_text": "Our Values",
+        "background_image": "shopify:\/\/shop_images\/about__values-bg.png"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "section_ember_cbem8Q",
+    "section_about_values_aqpFAP"
+  ]
+}

@@ -1,0 +1,56 @@
+<link rel="stylesheet" href="{{ 'not-found.css' | asset_url }}" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="{{ 'service-page.css' | asset_url }}" media="print" onload="this.media='all'">
+
+<section class="service-page not-found-page">
+  <img src="{{ 'not-found-image.svg' | asset_url }}" alt="" class="service-page__image">
+  <div class="service-page__container _container">
+    <div class="service-page__content">
+      <h1 class="service-page__heading not-found-page__heading">
+        #404
+      </h1>
+      <p class="service-page__message">
+        Oops! Page haven’t found
+      </p>
+      <a href="{{ section.settings.button_link }}">
+        <button class="service-page__button thank-page__button button button_animated button_white">
+          <p class="button__name">
+            {{ section.settings.button_text }}
+          </p>
+          <div class="button__jumper"></div>
+          <div class="button__icon">
+            <img src="{{ section.settings.button_icon | img_url: 'master' }}" alt="">
+          </div>
+        </button>
+      </a>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "404 Service Page",
+  "settings": [
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button Text",
+      "default": "To main page"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button Link"
+    },
+    {
+      "type": "image_picker",
+      "id": "button_icon",
+      "label": "Button Icon"
+    }
+  ],
+  "presets": [
+    {
+      "name": "404 Service Page"
+    }
+  ]
+}
+{% endschema %}

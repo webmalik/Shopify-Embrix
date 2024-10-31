@@ -1,0 +1,153 @@
+{{ 'quick-tips.css' | asset_url | stylesheet_tag }}
+
+<section class="quick-tips">
+    <div class="quick-tips__container _container">
+        <div class="quick-tips__wrapper">
+            <div class="quick-tips__item quick-tips__item--butterfly">
+                {% for block in section.blocks %}
+                    {% if block.type == 'card_block' and block.settings.order == '1' %}
+                        <div class="quick-tips__card">
+							<div class="quick-tips__image">
+								<img src="{{ block.settings.image | img_url: 'master' }}" alt="{{ block.settings.product_name }}">
+							</div>
+							<div class="quick-tips__content">
+								<h3 class="quick-tips__title">{{ block.settings.product_name }}</h3>
+								<p class="quick-tips__description">{{ block.settings.product_description }}</p>
+								<a href="{{ block.settings.link }}" class="button button_animated button_white">
+									<p class="button__name">
+										{{ block.settings.button_text }}
+									</p>
+									<div class="button__jumper"></div>
+									<div class="button__icon">
+										<img src="{{ 'button-icon.svg' | asset_url }}" alt="">
+									</div>
+								</a>
+							</div>
+                        </div>
+                    {% endif %}
+                {% endfor %}
+                <div class="quick-tips__list">
+                    {% for block in section.blocks %}
+                        {% if block.type == 'list_item_block' and block.settings.order == '1' %}
+                            <div class="quick-tips__list-item">
+                                <img src="{{ "tips-list-icon.svg" | asset_url }}" alt="" class="quick-tips__icon">
+                                <span>{{ block.settings.tip_text }}</span>
+                            </div>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="quick-tips__item quick-tips__item--smile">
+                {% for block in section.blocks %}
+                    {% if block.type == 'card_block' and block.settings.order == '2' %}
+                        <div class="quick-tips__card">
+							<div class="quick-tips__image">
+								<img src="{{ block.settings.image | img_url: 'master' }}" alt="{{ block.settings.product_name }}">
+							</div>
+							<div class="quick-tips__content">
+								<h3 class="quick-tips__title">{{ block.settings.product_name }}</h3>
+								<p class="quick-tips__description">{{ block.settings.product_description }}</p>
+								<a href="{{ block.settings.link }}" class="button button_animated button_white">
+									<p class="button__name">
+										{{ block.settings.button_text }}
+									</p>
+									<div class="button__jumper"></div>
+									<div class="button__icon">
+										<img src="{{ 'button-icon.svg' | asset_url }}" alt="">
+									</div>
+								</a>
+							</div>
+                        </div>
+                    {% endif %}
+                {% endfor %}
+                <div class="quick-tips__list">
+                    {% for block in section.blocks %}
+                        {% if block.type == 'list_item_block' and block.settings.order == '2' %}
+                            <div class="quick-tips__list-item">
+                                <img src="{{ "tips-list-icon.svg" | asset_url }}" alt="" class="quick-tips__icon">
+                                <span>{{ block.settings.tip_text }}</span>
+                            </div>
+                        {% endif %}
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% schema %}
+{
+    "name": "Quick Tips Section",
+    "blocks": [
+        {
+            "type": "card_block",
+            "name": "Product Card",
+            "settings": [
+                {
+                    "type": "text",
+                    "id": "product_name",
+                    "label": "Product Name",
+                    "default": "Lion's Mane"
+                },
+                {
+                    "type": "textarea",
+                    "id": "product_description",
+                    "label": "Product Description",
+                    "default": "Lion's Mane is the top choice for boosting brain function and neuroprotection."
+                },
+                {
+                    "type": "image_picker",
+                    "id": "image",
+                    "label": "Product Image"
+                },
+                {
+                    "type": "url",
+                    "id": "link",
+                    "label": "Link"
+                },
+                {
+                    "type": "text",
+                    "id": "button_text",
+                    "label": "Button Text",
+                    "default": "SHOP NOW"
+                },
+                {
+                    "type": "select",
+                    "id": "order",
+                    "label": "Order",
+                    "options": [
+                        { "value": "1", "label": "1" },
+                        { "value": "2", "label": "2" }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "list_item_block",
+            "name": "Tip List Item",
+            "settings": [
+                {
+                    "type": "text",
+                    "id": "tip_text",
+                    "label": "Tip Text",
+                    "default": "Take Lion's Mane capsules daily."
+                },
+                {
+                    "type": "select",
+                    "id": "order",
+                    "label": "To Block",
+                    "options": [
+                        { "value": "1", "label": "Lion’s mane" },
+                        { "value": "2", "label": "Amanita muscaria" }
+                    ]
+                }
+            ]
+        }
+    ],
+    "presets": [
+        {
+            "name": "Quick Tips"
+        }
+    ]
+}
+{% endschema %}

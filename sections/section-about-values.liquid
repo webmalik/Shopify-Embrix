@@ -1,0 +1,93 @@
+<link rel="stylesheet" href="{{ 'about-values.css' | asset_url }}" media="print" onload="this.media='all'">
+
+<div class="about__values">
+    <div class="about__values-wrapper">
+        <div class="about__values-content">
+            <div class="about__values-container _container">
+                <div class="about__values-header">
+                    <h2>{{ section.settings.header_text }}</h2>
+                </div>
+                <div class="about__values-list">
+                    {% for block in section.blocks %}
+                        <div class="about__values-item">
+                            <div class="about__values-icon">
+                                <img src="{{ block.settings.icon | img_url: 'master' }}" alt="{{ block.settings.title }}">
+                            </div>
+							<div class="about__values-inner">
+								<div class="about__values-title">
+									<h3>{{ block.settings.title }}</h3>
+								</div>
+								<div class="about__values-text">
+									<p>{{ block.settings.text }}</p>
+								</div>
+							</div>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </div>
+        <div class="about__values-image">
+            <img src="{{ section.settings.background_image | img_url: 'master' }}" alt="Values Image">
+        </div>
+    </div>
+</div>
+
+{% schema %}
+{
+    "name": "About Values Section",
+    "settings": [
+        {
+            "type": "text",
+            "id": "header_text",
+            "label": "Header Text",
+            "default": "Our Values"
+        },
+        {
+            "type": "image_picker",
+            "id": "background_image",
+            "label": "Background Image"
+        }
+    ],
+    "blocks": [
+        {
+            "type": "value_item",
+            "name": "Value Item",
+            "settings": [
+                {
+                    "type": "image_picker",
+                    "id": "icon",
+                    "label": "Value Icon"
+                },
+                {
+                    "type": "text",
+                    "id": "title",
+                    "label": "Value Title",
+                    "default": "Integrity"
+                },
+                {
+                    "type": "textarea",
+                    "id": "text",
+                    "label": "Value Text",
+                    "default": "We believe in honesty and transparency in everything we do."
+                }
+            ]
+        }
+    ],
+    "presets": [
+        {
+            "name": "About Values Section",
+            "blocks": [
+                {
+                    "type": "value_item"
+                },
+                {
+                    "type": "value_item"
+                },
+                {
+                    "type": "value_item"
+                }
+            ]
+        }
+    ]
+}
+{% endschema %}

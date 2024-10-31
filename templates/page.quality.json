@@ -1,0 +1,143 @@
+{
+  "sections": {
+    "section_page_header_j9mbYt": {
+      "type": "section-page-header",
+      "settings": {
+        "header-icon": "shopify:\/\/shop_images\/fi_16113057.svg"
+      }
+    },
+    "main": {
+      "type": "main-quality",
+      "settings": {
+        "bg_image_desktop": "shopify:\/\/shop_images\/quality.png",
+        "bg_image_mobile": "shopify:\/\/shop_images\/mob_b1ca110b-732e-483c-90f0-b9f441854f55.png",
+        "heading_highlight": "Raised with love",
+        "heading_main": "for nature",
+        "description": "We care about being eco-friendly. We work super hard to make top quality products without hurting the environment.",
+        "note_icon": "shopify:\/\/shop_images\/USDA_organic_seal_2.svg",
+        "note_text": "Our mushrooms grow naturally without the use of chemicals. We only provide the natural conditions for their growth."
+      }
+    },
+    "section_advantages_NnzhBV": {
+      "type": "section-advantages",
+      "blocks": {
+        "advantage_item_6CicmM": {
+          "type": "advantage_item",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/item-icon-1.svg",
+            "text": "Cruelty free"
+          }
+        },
+        "advantage_item_xQfGaG": {
+          "type": "advantage_item",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/item-icon-2.svg",
+            "text": "EU certificated"
+          }
+        },
+        "advantage_item_fPiVbb": {
+          "type": "advantage_item",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/item-icon-3.svg",
+            "text": "Premium quality"
+          }
+        },
+        "advantage_item_6ELBP7": {
+          "type": "advantage_item",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/item-icon-4.svg",
+            "text": "Non-GMO"
+          }
+        },
+        "advantage_item_j3CNwP": {
+          "type": "advantage_item",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/item-icon-5.svg",
+            "text": "100% organic"
+          }
+        },
+        "advantage_item_i8B7eb": {
+          "type": "advantage_item",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/item-icon-6.svg",
+            "text": "Gluten Free"
+          }
+        }
+      },
+      "block_order": [
+        "advantage_item_6CicmM",
+        "advantage_item_xQfGaG",
+        "advantage_item_fPiVbb",
+        "advantage_item_6ELBP7",
+        "advantage_item_j3CNwP",
+        "advantage_item_i8B7eb"
+      ],
+      "settings": {
+        "button_hidden": true,
+        "button_link": "",
+        "persent": "100%",
+        "heading": "safe and organic",
+        "text": "Our mushrooms are as organic as grandma’s home-baked cookies. Grown without any nasty chemicals, we ensure that each mushroom is rigorously tested and safe for consumption.",
+        "button_text": "learn more"
+      }
+    },
+    "section_test_6LJJth": {
+      "type": "section-test",
+      "blocks": {
+        "test_block_Wz8JrA": {
+          "type": "test_block",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/t1.png",
+            "block_heading": "Purity and Safety",
+            "block_description": "We make sure our mushrooms are as pure as they come. Each batch is thoroughly tested to ensure they’re free from any harmful bacteria, mold, or other contaminants."
+          }
+        },
+        "test_block_VLmtEn": {
+          "type": "test_block",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/t2.svg",
+            "block_heading": "Heavy Metals",
+            "block_description": "We love heavy metal music, but not heavy metals in our mushrooms. We test to keep out the bad stuff like lead and mercury"
+          }
+        },
+        "test_block_47WHHp": {
+          "type": "test_block",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/t3.svg",
+            "block_heading": "Pesticides and Herbicides",
+            "block_description": "Our mushrooms grow naturally and free from chemical nasties. We rigorously test to ensure they contain no pesticides or herbicides"
+          }
+        }
+      },
+      "block_order": [
+        "test_block_Wz8JrA",
+        "test_block_VLmtEn",
+        "test_block_47WHHp"
+      ],
+      "settings": {
+        "heading": "How We Test Our Products",
+        "description": "<span>Our mushrooms pass more tests than a straight-A student,<\/span> so we're always confident in the quality and safety of our supplements.",
+        "main_image": "shopify:\/\/shop_images\/test.svg"
+      }
+    },
+    "section_contact_form_U7BrB4": {
+      "type": "section-contact-form",
+      "settings": {
+        "heading": "Got Questions?",
+        "subheading": "We’ve Got Answers!",
+        "text": "Feel free to reach out to us. We're here to help and ensure you get the answers you need.",
+        "placeholder_name": "Name",
+        "placeholder_email": "E-mail",
+        "placeholder_phone": "Phone Number",
+        "button_text": "send"
+      }
+    }
+  },
+  "order": [
+    "section_page_header_j9mbYt",
+    "main",
+    "section_advantages_NnzhBV",
+    "section_test_6LJJth",
+    "section_contact_form_U7BrB4"
+  ]
+}

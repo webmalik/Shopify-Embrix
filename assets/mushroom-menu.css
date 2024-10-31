@@ -1,0 +1,271 @@
+.mushroom-menu {
+    padding: 200px 0;
+}
+
+.mushroom-menu.collection {
+    padding: 80px 0 200px;
+}
+
+.mushroom-menu__container {
+}
+
+.mushroom-menu__heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.mushroom-menu__heading h2 {
+    font-family: 'Coolvetica';
+    font-size: 72px;
+    letter-spacing: -0.792px;
+}
+
+.mushroom-menu__heading img {
+}
+
+.mushroom-menu__items {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    gap: 40px;
+    margin-top: 60px;
+}
+
+.mushrooms-menu__item {
+    background-color: white;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.mushroom-menu__content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+    background-color: black;
+    padding: 92px 59px 59px;
+    color: white;
+    height: 100%;
+}
+
+.mushroom-menu__image {
+    position: absolute;
+    top: -15.16rem;
+    width: 69%;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.mushrooms-menu__item:last-child .mushroom-menu__image {
+    /* width: 58%; */
+    top: -14rem;
+}
+
+.mushroom__title {
+    font-family: 'Coolvetica';
+    font-size: 4rem;
+}
+
+.mushroom-menu__description {
+    font-size: 18px;
+    font-weight: 500;
+    color: #9d9d9d;
+    letter-spacing: 0.9px;
+    max-width: 416px;
+    text-align: center;
+    margin: 14px auto 0;
+    margin-bottom: 60px;
+}
+
+.mushroom-menu__buttons {
+    display: flex;
+    gap: 24px;
+    /* flex-wrap: wrap; */
+    justify-content: center;
+}
+.mushroom-menu__buttons form {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.mushroom-menu__buttons .button_purple:hover .button__icon svg path {
+    fill: var(--pink-main);
+}
+
+.mushroom__bg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.mushroom__bg img {
+    width: 100%;
+    height: 100%;
+}
+
+.mushroom__bg-text-line {
+    display: flex;
+    flex-wrap: nowrap;
+    font-size: 2rem;
+    font-weight: 500;
+    color: #eeeeee;
+    gap: 1.44rem;
+}
+
+.mushroom__bg-text-line p {
+    display: flex;
+    align-items: center;
+    gap: 0.66rem;
+    text-wrap: nowrap;
+    margin-left: 0.4rem;
+}
+
+.mushroom__bg-text-line img {
+    width: 1.77rem;
+}
+
+.mushroom__bg-text_purple {
+    color: var(--pink-main);
+}
+
+@media (max-width: 1250px) {
+    .mushroom-menu__buttons {
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 768px) {
+    .mushroom-menu {
+        padding: 100px 0;
+    }
+    .mushroom-menu.collection {
+        padding: 80px 0 80px;
+    }
+    .mushroom-menu__items {
+        flex-direction: column;
+        max-width: 600px;
+        margin: 50px auto 0;
+    }
+    .mushrooms-menu__item {
+        /* padding-top: 20.5rem; */
+    }
+
+    .mushroom-menu__buttons .button {
+        max-width: 100%;
+    }
+    .mushroom-menu__buttons .button__name {
+        max-width: 100%;
+    }
+    .mushroom-menu__buttons .button_purple .button__icon {
+        padding: 20px;
+    }
+
+    .mushroom-menu__content {
+        padding: 50px 30px 30px;
+    }
+    /* .mushroom-menu__item:last-child .mushroom__bg-text{
+        margin-left: 10rem;
+    } */
+    .mushrooms-menu__item:last-child .mushroom__bg-text-line:nth-child(3) {
+        margin-left: -33rem;
+    }
+    .mushrooms-menu__item:last-child .mushroom__bg-text-line:nth-child(4) {
+        margin-left: -10rem;
+    }
+
+    .mushroom-menu__image {
+        top: -13rem;
+    }
+
+    .mushroom-menu__heading h2 {
+        font-size: 48px;
+    }
+    .mushroom-menu__heading img {
+        width: 60px;
+    }
+}
+
+@media (max-width: 480px) {
+    .mushroom-menu {
+        padding: 80px 0;
+    }
+    .mushroom-menu.collection {
+        padding: 40px 0 80px;
+    }
+    .mushroom-menu__heading h2 {
+        font-size: 32px;
+    }
+    .mushroom-menu__heading img {
+        width: 32px;
+    }
+    .mushroom-menu__items {
+        margin-top: 40px;
+        gap: 16px;
+    }
+    .mushrooms-menu__item {
+        /* padding-top: 12.44rem; */
+    }
+    .mushroom-menu__content {
+        padding: 40px 16px 16px;
+    }
+    .mushroom__bg-text-line {
+        font-size: 0.88rem;
+        gap: 0.63rem;
+    }
+    .mushroom__bg-text {
+        gap: 0.38rem;
+        margin-left: 11.5rem;
+        top: -1rem;
+    }
+    .mushroom-menu__item:last-child .mushroom__bg-text {
+        margin-left: 0rem;
+    }
+    .mushroom__bg-text-line img {
+        width: 0.77rem;
+        max-height: 100%;
+    }
+    .mushroom-menu__image {
+        top: -7rem;
+        width: 73%;
+    }
+    .mushroom__title {
+        font-size: 32px;
+    }
+    .mushroom-menu__description {
+        font-size: 14px;
+        margin: 8px auto 32px;
+        max-width: 280px;
+    }
+    .mushroom-menu__buttons {
+        gap: 8px;
+    }
+
+    .mushrooms-menu__item .mushroom__bg-text-line:nth-child(1) {
+        display: flex;
+    }
+    .mushrooms-menu__item:first-child .mushroom__bg-text-line:nth-child(5) {
+        margin-left: -16rem;
+    }
+
+    .mushrooms-menu__item:last-child .mushroom__bg-text-line:nth-child(2) {
+        margin-left: -25rem;
+    }
+    .mushrooms-menu__item:last-child .mushroom__bg-text-line:nth-child(3) {
+        margin-left: -14rem;
+    }
+    .mushrooms-menu__item:last-child .mushroom__bg-text-line:nth-child(4) {
+        margin-left: -28rem;
+    }
+    .mushrooms-menu__item:last-child .mushroom-menu__image {
+        top: -6rem;
+        width: 60%;
+    }
+
+    .mushrooms-menu__item:last-child .mushroom__bg-text {
+        margin-left: 11.5rem;
+    }
+}

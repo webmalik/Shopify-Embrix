@@ -1,0 +1,43 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-product-custom",
+      "blocks": {
+        "tag_phxHLj": {
+          "type": "tag",
+          "settings": {
+            "tag_icon": "shopify:\/\/shop_images\/icon-focus.svg",
+            "tag_text": "Focus"
+          }
+        },
+        "tag_N6XkXb": {
+          "type": "tag",
+          "settings": {
+            "tag_icon": "shopify:\/\/shop_images\/icon-clarity.svg",
+            "tag_text": "Clarity"
+          }
+        },
+        "tag_MJAfbF": {
+          "type": "tag",
+          "settings": {
+            "tag_icon": "shopify:\/\/shop_images\/icon-mood.svg",
+            "tag_text": "Mood"
+          }
+        }
+      },
+      "block_order": [
+        "tag_phxHLj",
+        "tag_N6XkXb",
+        "tag_MJAfbF"
+      ],
+      "settings": {
+        "quantity_heading": "quantity",
+        "add_to_cart_text": "Add to cart",
+        "shipping_text": "Free shipping over $50"
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

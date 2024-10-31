@@ -1,0 +1,46 @@
+@media (max-width: 992px) {
+    .about-us {
+        padding: 80px 0;
+    }
+    .about-us__subtext {
+        font-size: 14px;
+    }
+
+    .about-us__heading {
+        font-size: 42px;
+    }
+
+    .about-us__footer {
+        flex-direction: column;
+        gap: 40px;
+        margin-top: 24px;
+    }
+
+    .about-us__text {
+        font-size: 14px;
+    }
+
+    .about-us__button {
+        justify-content: flex-start;
+        max-width: 268px;
+    }
+
+    .about-us__button .button__name {
+        font-size: 14px;
+        padding: 22px 66px;
+    }
+    .about-us__button .button__icon {
+        padding: 9px;
+    }
+
+    .about-us__button .button__jumper {
+        width: 6px;
+        height: 22px;
+        margin: 0 -1px;
+    }
+
+    .about-us__image {
+        flex: auto;
+        width: 100%;
+    }
+}

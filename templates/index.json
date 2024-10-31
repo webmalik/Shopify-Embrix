@@ -1,0 +1,324 @@
+{
+  "sections": {
+    "section_hero_znC8tE": {
+      "type": "section-hero",
+      "settings": {
+        "bottle_image": "shopify:\/\/shop_images\/bottle.png",
+        "pink_background_image": "shopify:\/\/shop_images\/pink-background.svg",
+        "mushroom_image": "shopify:\/\/shop_images\/mushroom.svg",
+        "subtext": "New generation of food additives",
+        "heading": "Experience the Emberix Difference",
+        "highlighted_word": "Difference",
+        "description": "Bringing nature’s best to your wellness journey",
+        "button_text": "Shop now",
+        "button_link": "shopify:\/\/collections\/all",
+        "button_icon": "shopify:\/\/shop_images\/button-icon.svg"
+      }
+    },
+    "section_show_Htfd7C": {
+      "type": "section-show",
+      "blocks": {
+        "show_item_Re6htw": {
+          "type": "show_item",
+          "settings": {
+            "item_title": "THE",
+            "item_image": "shopify:\/\/shop_images\/image-1.svg",
+            "item_text": "New generation of food additives"
+          }
+        },
+        "show_item_YhxEpb": {
+          "type": "show_item",
+          "settings": {
+            "item_title": "HOW",
+            "item_image": "shopify:\/\/shop_images\/image-2.svg",
+            "item_text": "Life can be calm and happy"
+          }
+        },
+        "show_item_3hDjYc": {
+          "type": "show_item",
+          "settings": {
+            "item_title": "WHAT",
+            "item_image": "shopify:\/\/shop_images\/image-3.svg",
+            "item_text": "Benefits mushrooms have"
+          }
+        }
+      },
+      "block_order": [
+        "show_item_Re6htw",
+        "show_item_YhxEpb",
+        "show_item_3hDjYc"
+      ],
+      "settings": {
+        "section_heading": "We’re here to show"
+      }
+    },
+    "section_refresh_HDPWY7": {
+      "type": "section-refresh",
+      "settings": {
+        "subtext": "It’s your time to",
+        "subheading": "recharge your body",
+        "heading": "refresh your mind"
+      }
+    },
+    "section_mushroom_ixeVVV": {
+      "type": "section-mushroom",
+      "blocks": {
+        "mushroom_block_CapfEU": {
+          "type": "mushroom_block",
+          "settings": {
+            "background_image": "shopify:\/\/shop_images\/mmbg-1.svg",
+            "product_image": "shopify:\/\/shop_images\/mushroom-1.png",
+            "selected_product": "lion-s-mane",
+            "product_title": "Lion’s mane",
+            "product_description": "Lion's Mane is the top choice for boosting brain function and neuroprotection"
+          }
+        },
+        "mushroom_block_aaUVE9": {
+          "type": "mushroom_block",
+          "settings": {
+            "background_image": "shopify:\/\/shop_images\/mmbg-2.png",
+            "product_image": "shopify:\/\/shop_images\/mushroom-2.png",
+            "selected_product": "amanita-muscaria",
+            "product_title": "Amanita muscaria",
+            "product_description": "Amanita muscaria increases efficiency and creates harmony between the brain and body"
+          }
+        }
+      },
+      "block_order": [
+        "mushroom_block_CapfEU",
+        "mushroom_block_aaUVE9"
+      ],
+      "settings": {
+        "show_header": true,
+        "heading": "Mushroom Menu",
+        "selected_collection": "mushroom",
+        "max_products": 5,
+        "add_to_cart_text": "Add to Cart",
+        "shop_now_text": "Learn More"
+      }
+    },
+    "section_benefit_Hr96RU": {
+      "type": "section-benefit",
+      "blocks": {
+        "benefits_item_k4RGHg": {
+          "type": "benefits_item",
+          "settings": {
+            "effect": "Boosted Energy",
+            "image": "shopify:\/\/shop_images\/benefits-image-1.png",
+            "image_bg": "shopify:\/\/shop_images\/222_88e1bca2-b787-45a2-add8-a89262765407.png",
+            "description": "Relaxed nervous system and quality sleep"
+          }
+        },
+        "benefits_item_9WQwbb": {
+          "type": "benefits_item",
+          "settings": {
+            "effect": "Boosted Energy",
+            "image": "shopify:\/\/shop_images\/benefits-image-2.png",
+            "image_bg": "shopify:\/\/shop_images\/111_4a9eb55c-ed09-4f43-81ff-12753a4bb8d2.png",
+            "description": "Relaxed nervous system and quality sleep"
+          }
+        },
+        "benefits_item_Qydff9": {
+          "type": "benefits_item",
+          "settings": {
+            "effect": "Boosted Energy",
+            "image": "shopify:\/\/shop_images\/benefits-image-3.png",
+            "image_bg": "shopify:\/\/shop_images\/333_b79ec768-7d0a-40f0-80f9-c462b41eb3b1.png",
+            "description": "Relaxed nervous system and quality sleep"
+          }
+        }
+      },
+      "block_order": [
+        "benefits_item_k4RGHg",
+        "benefits_item_9WQwbb",
+        "benefits_item_Qydff9"
+      ],
+      "settings": {
+        "subheading": "from shrooms",
+        "show_header": true
+      }
+    },
+    "section_review_xbqEaC": {
+      "type": "section-review",
+      "blocks": {
+        "review_item_8x3azb1": {
+          "type": "review_item",
+          "settings": {
+            "product_name": "Product: Amanita muscaria",
+            "title": "As a student, I deal with a lot of stress. One day, I decided to try Amanita muscaria, and I don't regret it.",
+            "text": "My stress levels have dropped, my concentration has improved, and studying has become easier.",
+            "avatar": "shopify:\/\/shop_images\/11.png",
+            "name": "Pavlo Anderson"
+          }
+        },
+        "review_item_dwDG942": {
+          "type": "review_item",
+          "settings": {
+            "product_name": "Product: Lion’s mane",
+            "title": "I often hit creative blocks where I can't come up with any ideas,",
+            "text": "but since adding Lion's mane to my diet, I've noticed a surge in good ideas and a significant boost in my creativity.",
+            "avatar": "shopify:\/\/shop_images\/3.png",
+            "name": "Frank Uver"
+          }
+        },
+        "review_item_WQrLGg1": {
+          "type": "review_item",
+          "settings": {
+            "product_name": "Product: Amanita muscaria",
+            "title": "I was initially skeptical about an all-natural product, given the mixed reviews, but I decided to give it a shot.",
+            "text": "I'm glad I did because I've noticed a significant boost in my energy levels and overall well-being.\"",
+            "avatar": "shopify:\/\/shop_images\/112.png",
+            "name": "Anastasia Brown"
+          }
+        },
+        "review_item_yNJkea2": {
+          "type": "review_item",
+          "settings": {
+            "product_name": "Product: Lion’s mane",
+            "title": "I recently decided to get into fitness, and it was harder than I expected.",
+            "text": " I often felt drained and struggled to recover after intense workouts. After finding an article about Lion's mane, I gave it a try, and soon after, I felt more energetic and well-rested. I highly recommend it to anyone looking to improve their life.",
+            "avatar": "shopify:\/\/shop_images\/4.png",
+            "name": "Dmitry Tretniev"
+          }
+        },
+        "review_item_dwDG941": {
+          "type": "review_item",
+          "settings": {
+            "product_name": "Product: Amanita muscaria",
+            "title": "It seems to help with memory and cognition. I'll definitely buy it again.",
+            "text": "",
+            "avatar": "shopify:\/\/shop_images\/113.png",
+            "name": "Dmitry Johnson"
+          }
+        },
+        "review_item_WQrLGg2": {
+          "type": "review_item",
+          "settings": {
+            "product_name": "Product: Lion’s mane",
+            "title": "This stuff is amazing! I've been taking it for three months, and I can genuinely feel the difference in my daily life.",
+            "text": "No more brain fatigue, and my health has definitely improved.",
+            "avatar": "shopify:\/\/shop_images\/2_e4f1298f-dd30-426c-9e2e-f46b4d76f80f.png",
+            "name": "Denys Dream"
+          }
+        },
+        "review_item_yNJkea1": {
+          "type": "review_item",
+          "settings": {
+            "product_name": "Product: Amanita muscaria",
+            "title": "I bought this product to support my immune system.",
+            "text": "Since taking it, my immune system has become much stronger, and I’m no longer catching every virus or bacteria that comes my way. I'm very happy with the results.",
+            "avatar": "shopify:\/\/shop_images\/114.png",
+            "name": "Nadia Davis"
+          }
+        },
+        "review_item_KwtpEi1": {
+          "type": "review_item",
+          "settings": {
+            "product_name": "Product: Amanita muscaria",
+            "title": "I’m a writer, and inspiration is essential for me to create and live.",
+            "text": "After hours of fruitless attempts to write something worthwhile, I realized it was time for a change. I highly recommend Amanita muscaria to fellow artists – it really helps.",
+            "avatar": "shopify:\/\/shop_images\/115.png",
+            "name": "Peter Taylor"
+          }
+        },
+        "review_item_8x3azb2": {
+          "type": "review_item",
+          "settings": {
+            "product_name": "Product: Lion’s mane",
+            "title": "I was initially skeptical about an all-natural product, given the mixed reviews, but I decided to give it a shot.",
+            "text": "I'm glad I did because I've noticed a significant boost in my energy levels and overall well-being.\"",
+            "avatar": "shopify:\/\/shop_images\/1_a9332fe8-449f-4221-bbde-9ed25f0608a5.png",
+            "name": "Renata Molchanova"
+          }
+        },
+        "review_item_KwtpEi2": {
+          "type": "review_item",
+          "settings": {
+            "product_name": "Product: Lion’s mane",
+            "title": "I've been using these for a week now and I feel way more focused at work.",
+            "text": "I don't get as tired or irritable anymore either. No more brain fog since I started, so I highly recommend them.",
+            "avatar": "shopify:\/\/shop_images\/5.png",
+            "name": "Alex Thompson"
+          }
+        }
+      },
+      "block_order": [
+        "review_item_8x3azb1",
+        "review_item_dwDG942",
+        "review_item_WQrLGg1",
+        "review_item_yNJkea2",
+        "review_item_dwDG941",
+        "review_item_WQrLGg2",
+        "review_item_yNJkea1",
+        "review_item_KwtpEi1",
+        "review_item_8x3azb2",
+        "review_item_KwtpEi2"
+      ],
+      "settings": {
+        "heading": "How people feel about  the product?"
+      }
+    },
+    "section_organic_EHhfGE": {
+      "type": "section-organic",
+      "settings": {
+        "background_image": "shopify:\/\/shop_images\/bg.jpg",
+        "background_image_mobile": "shopify:\/\/shop_images\/organic-mobile.png",
+        "button_icon": "shopify:\/\/shop_images\/button-icon.svg",
+        "heading": "Organic shrooms from the <span>European<\/span> mountains",
+        "text": "Our mushrooms are grown by nature, without harmful chemicals",
+        "button_text": "Learn more",
+        "button_link": ""
+      }
+    },
+    "section_about_us_VUWPMR": {
+      "type": "section-about-us",
+      "settings": {
+        "subtext": "Who is behind Emberix?",
+        "heading": "Hello there, we are <span>enthusiastic team<\/span> of mushroom experts.",
+        "image": "shopify:\/\/shop_images\/emodgy.svg",
+        "text": "Think of us as the love child of a nature. We’re passionate about bringing the power of nature to your doorstep, minus the bug bites and unpredictable weather.",
+        "button_text": "About us",
+        "button_link": ""
+      }
+    },
+    "section_value_FG3BLR": {
+      "type": "section-value",
+      "settings": {
+        "present_image": "shopify:\/\/shop_images\/present.svg",
+        "heading_part_1": "You value",
+        "heading_part_2": "our product,",
+        "heading_part_3": "we value",
+        "heading_part_4": "your loyalty",
+        "discount_text": "20% OFF",
+        "subscription_text": "With subscription for <span>20\/30\/45 days<\/span>",
+        "button_text": "Shop now",
+        "button_link": "shopify:\/\/collections\/all"
+      }
+    },
+    "section_blog_slider_LA6izn": {
+      "type": "section-blog-slider",
+      "settings": {
+        "show_header_Blog": true,
+        "heading": "Mushroom Chronicles",
+        "all_articles_link": "shopify:\/\/blogs\/all",
+        "all_articles_text": "All Articles",
+        "selected_blog": "all",
+        "max_articles": 3,
+        "button_text": "Read",
+        "show_reading_time": false
+      }
+    }
+  },
+  "order": [
+    "section_hero_znC8tE",
+    "section_show_Htfd7C",
+    "section_refresh_HDPWY7",
+    "section_mushroom_ixeVVV",
+    "section_benefit_Hr96RU",
+    "section_review_xbqEaC",
+    "section_organic_EHhfGE",
+    "section_about_us_VUWPMR",
+    "section_value_FG3BLR",
+    "section_blog_slider_LA6izn"
+  ]
+}

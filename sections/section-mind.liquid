@@ -1,0 +1,99 @@
+<link rel="stylesheet" href="{{ 'mind-body.css' | asset_url }}" media="print" onload="this.media='all'">
+
+<section class="mind-body">
+    <div class="mind-body__container _container">
+        <div class="mind-body__bg-image">
+            <img src="{{ section.settings.bg_image_1 | img_url: 'master' }}" alt="">
+        </div>
+        <div class="mind-body__bg-image">
+            <img src="{{ section.settings.bg_image_2 | img_url: 'master' }}" alt="">
+        </div>
+        <div class="mind-body__content">
+            
+        </div>
+        <h3 class="mind-body__subheading">
+            <img src="{{ section.settings.subheading_icon | img_url: 'small' }}" alt="">
+            {{ section.settings.subheading }}
+        </h3>
+        <h2 class="mind-body__heading">
+            {{ section.settings.heading_part_1 }} <span>&</span>
+        </h2>
+        <h2 class="mind-body__heading mind-body__heading_l">
+            {{ section.settings.heading_part_2 }}
+        </h2>
+        <p class="mind-body__text">
+            {{ section.settings.text }}
+        </p>
+        <a href="{{ section.settings.shop_now_link }}" class="mind-body__button common-button button_animated">
+            <div class="button__name">
+                {{ section.settings.button_text }}
+            </div>
+            <div class="button__icon">
+                <img src="{{ 'button-icon.svg' | asset_url }}" alt="">
+            </div>
+        </a>
+    </div>
+</section>
+
+{% schema %}
+{
+    "name": "Mind Body Section",
+    "settings": [
+        {
+            "type": "image_picker",
+            "id": "bg_image_1",
+            "label": "Background Image 1"
+        },
+        {
+            "type": "image_picker",
+            "id": "bg_image_2",
+            "label": "Background Image 2"
+        },
+        {
+            "type": "image_picker",
+            "id": "subheading_icon",
+            "label": "Subheading Icon"
+        },
+        {
+            "type": "text",
+            "id": "subheading",
+            "label": "Subheading",
+            "default": "The Mushroom Marvel"
+        },
+        {
+            "type": "text",
+            "id": "heading_part_1",
+            "label": "Heading Part 1",
+            "default": "for Mind"
+        },
+        {
+            "type": "text",
+            "id": "heading_part_2",
+            "label": "Heading Part 2",
+            "default": "Body!"
+        },
+        {
+            "type": "textarea",
+            "id": "text",
+            "label": "Description Text",
+            "default": "Meet the Lion’s Mane mushroom, your brain’s new best friend! As a natural brain charger, it helps you with memory and concentration. Feeling a bit down? Lion’s Mane can lift your spirits, acting like a little cheerleader for your brain to help you feel happier and more relaxed. It also protects your nerves, encouraging the growth of new ones and giving your immune system a boost."
+        },
+        {
+            "type": "text",
+            "id": "button_text",
+            "label": "Button Text",
+            "default": "show now"
+        },
+        {
+            "type": "url",
+            "id": "shop_now_link",
+            "label": "Shop Now Link"
+        }
+    ],
+    "presets": [
+        {
+            "name": "Mind Body Section"
+        }
+    ]
+}
+{% endschema %}

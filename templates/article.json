@@ -1,0 +1,20 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-article",
+      "settings": {
+        "show_author": false,
+        "show_date": false,
+        "show_comments": false,
+        "show_related_articles": true,
+        "related_articles_heading": "Related Articles",
+        "max_related_articles": 3,
+        "button_text": "Read",
+        "show_reading_time": true
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

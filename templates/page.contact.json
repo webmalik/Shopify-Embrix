@@ -1,0 +1,69 @@
+{
+  "sections": {
+    "section_contact_form_wqDfcF": {
+      "type": "section-contact-form",
+      "settings": {
+        "heading": "Got Questions?",
+        "subheading": "We’ve Got Answers!",
+        "text": "Feel free to reach out to us. We're here to help and ensure you get the answers you need.",
+        "placeholder_name": "Name",
+        "placeholder_email": "E-mail",
+        "placeholder_phone": "Phone Number",
+        "button_text": "send"
+      }
+    },
+    "main": {
+      "type": "main-contact",
+      "blocks": {
+        "copy_block_8XjqQX": {
+          "type": "copy_block",
+          "settings": {
+            "label": "Phone",
+            "value": "+380 96 123 45 67",
+            "link": "tel:+380961234567",
+            "button_text": "CALL",
+            "icon": "shopify:\/\/shop_images\/phone.svg"
+          }
+        },
+        "copy_block_tbVpKP": {
+          "type": "copy_block",
+          "settings": {
+            "label": "E-mail",
+            "value": "emberix@gmail.com",
+            "link": "mailto:emberix@gmail.com",
+            "button_text": "mail us",
+            "icon": "shopify:\/\/shop_images\/mail.svg"
+          }
+        },
+        "info_block_nF4MKb": {
+          "type": "info_block",
+          "settings": {
+            "label": "Working hours",
+            "value": "10:00-18:00",
+            "info_inverce": false
+          }
+        },
+        "info_block_dzwEcG": {
+          "type": "info_block",
+          "settings": {
+            "label": "Weekend working hours",
+            "value": "11:00-14:00",
+            "info_inverce": true
+          }
+        }
+      },
+      "block_order": [
+        "copy_block_8XjqQX",
+        "copy_block_tbVpKP",
+        "info_block_nF4MKb",
+        "info_block_dzwEcG"
+      ],
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "section_contact_form_wqDfcF",
+    "main"
+  ]
+}

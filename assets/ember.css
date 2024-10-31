@@ -1,0 +1,182 @@
+.ember {
+    margin-bottom: 200px;
+}
+.ember__logo-section {
+    position: relative;
+    margin: 200px auto 80px;
+    text-align: center;
+    max-width: 952px;
+}
+.ember__logo {
+    width: 100%;
+}
+
+.ember__logo-label {
+    position: absolute;
+    top: 58%;
+    left: 50%;
+    transform: translateX(-50%) rotate(11deg);
+    display: block;
+    padding: 26px 40px;
+    background: var(--pink-main);
+    font-family: var(--font-family);
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 120%;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: #fff;
+    z-index: 2;
+}
+.ember__features {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.ember__feature {
+    min-width: clamp(250px, 30vw, 500px);
+    height: clamp(250px, 30vw, 500px);
+    background: #000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+.ember__feature span {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 120%;
+    letter-spacing: 0.07em;
+    color: #fff;
+}
+.ember__feature-title {
+    font-family: var(--second-family);
+    font-weight: 400;
+    font-size: clamp(42px, 5vw, 72px);
+    line-height: 120%;
+    letter-spacing: -0.02em;
+    text-transform: uppercase;
+    color: var(--pink-main);
+}
+.ember__description {
+    width: 100%;
+    max-width: 440px;
+    min-width: 440px;
+    margin: 0 auto;
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 20px;
+    gap: 32px;
+    opacity: 0;
+}
+
+.ember__inner {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 10px;
+    overflow: hidden;
+}
+
+.ember__fire {
+    max-width: clamp(64px, 6vw, 100px);
+}
+.ember__fire img {
+    width: 100%;
+}
+.ember__meaning {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 133%;
+    letter-spacing: 0.07em;
+    text-align: center;
+    color: #000;
+}
+.ember__meaning span {
+    color: var(--pink-main);
+}
+.ember__feature--inspiration {
+}
+
+@media (max-width: 1280px) {
+    .ember__description {
+        min-width: auto;
+    }
+}
+
+@media (max-width: 992px) {
+    .ember {
+        margin-bottom: 100px;
+    }
+
+    .ember__inner {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        max-width: 100%;
+        max-height: 10px;
+        overflow: hidden;
+    }
+
+    .ember__logo-section {
+        position: relative;
+        margin: 80px auto 32px;
+        text-align: center;
+        max-width: 952px;
+    }
+
+    .ember__feature {
+        min-width: 342px;
+        height: 342px;
+    }
+
+    .ember__description {
+        min-width: 342px;
+        height: 342px;
+        order: 3;
+    }
+    .ember__features {
+        flex-direction: column;
+    }
+
+    .ember__feature {
+        width: 100%;
+    }
+}
+@media (max-width: 768px) {
+    .ember__feature {
+        min-width: 207px;
+        height: 207px;
+    }
+    .ember__logo-section {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .ember__logo-label {
+        position: relative;
+        top: auto;
+        left: auto;
+        padding: 6px 11px;
+        margin-left: 0;
+        margin-right: auto;
+        transform: none;
+        text-transform: none;
+    }
+
+    .ember__description {
+        min-width: 207px;
+        margin-top: 32px;
+        margin-bottom: 32px;
+        height: auto;
+        order: 3;
+    }
+}

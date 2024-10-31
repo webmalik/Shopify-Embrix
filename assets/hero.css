@@ -1,0 +1,146 @@
+.hero {
+    position: relative;
+    overflow: hidden;
+    padding: 4.06vw 0 5.94vw;
+    background-color: #000;
+}
+
+.hero__container {
+    position: relative;
+    z-index: 1;
+}
+
+.hero__bottles {
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.hero__bottles img {
+    height: 100%;
+    width: auto;
+    object-fit: contain;
+}
+
+.hero__pink-bg {
+    position: absolute;
+    top: -19.32vw;
+    left: -17.5vw;
+    width: 68.64vw;
+}
+
+.hero__pink-bg img {
+    max-width: 100%;
+}
+
+.hero__content {
+    color: white;
+}
+
+.hero__mushroom {
+    width: 20vw;
+}
+
+.hero__mushroom img {
+    max-width: 100%;
+}
+
+.hero__heading {
+    font-size: 6vw;
+    font-family: 'Coolvetica';
+    letter-spacing: -0.12px;
+    text-transform: uppercase;
+    text-align: start;
+    line-height: 100%;
+    margin-top: -5vw;
+}
+
+.hero__heading span {
+    line-height: 90%;
+    color: #000;
+}
+
+.hero__text {
+    font-weight: 500;
+    letter-spacing: 1.242px;
+    font-size: 18px;
+    margin-top: 2vw;
+}
+
+.hero__subtext {
+    font-family: 'Coolvetica';
+    font-size: 32px;
+    text-transform: uppercase;
+    line-height: 0.9;
+    font-weight: 900;
+    color: white;
+    max-width: 131px;
+    letter-spacing: -0.05px;
+    position: absolute;
+    right: 0;
+    top: 85px;
+}
+
+.hero__subtext img {
+    position: relative;
+    width: 11px;
+    height: 12px;
+    right: 5px;
+    bottom: 3px;
+}
+
+.hero__button {
+    margin-top: 3.33vw;
+    align-self: stretch;
+}
+
+.button.hero__button:hover > * {
+    background-color: black;
+    color: white;
+}
+
+.button.hero__button:hover .button__icon {
+    background-color: white;
+}
+
+.hero__button .button__name {
+    font-size: 16px;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-self: stretch;
+}
+
+.hero__button .button__icon {
+    padding: 14px;
+}
+
+.hero__button .button__icon img {
+    width: 52px;
+    height: 52px;
+}
+
+.button.hero__button:hover .button__name,
+.button.hero__button:hover .button__jumper {
+    background-color: black;
+}
+
+/* .hero__button .button__name{
+    
+} */
+
+@media (max-width: 1760px) {
+    .hero__subtext {
+        right: 50px;
+    }
+}
+
+@media (max-width: 992px) {
+    .hero__subtext {
+        right: 20px;
+    }
+}

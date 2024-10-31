@@ -1,0 +1,151 @@
+.value {
+    color: white;
+}
+
+.value__container {
+    position: relative;
+    background-color: black;
+    padding-left: 84px;
+    overflow: hidden;
+}
+
+.value__content {
+    max-width: 61.5%;
+    padding: 55px 0 80px;
+}
+
+.value__heading {
+    font-family: 'Coolvetica';
+    font-size: 64px;
+    letter-spacing: -0.704px;
+    display: flex;
+    flex-direction: column;
+}
+
+.value__heading-part:nth-child(1) {
+    text-align: start;
+}
+
+.value__heading-part:nth-child(2) {
+    text-align: end;
+}
+
+.value__heading-part span {
+    color: #626262;
+}
+
+.value__off {
+    color: #ff18b2;
+    font-size: 14.44rem;
+    font-weight: 500;
+    letter-spacing: -2.86px;
+    text-wrap: nowrap;
+    margin-top: 24px;
+}
+
+.value__footer {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.value__subscription {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.value__subscription img {
+    width: 32px;
+    height: 32px;
+}
+
+.value__subscription p {
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 1.242px;
+}
+
+.value__subscription span {
+    color: var(--pink-main);
+}
+
+.value__button {
+}
+
+.value__present {
+    position: absolute;
+    width: 36%;
+    bottom: -70px;
+    right: -30px;
+}
+
+@media (max-width: 1200px) {
+    .value__heading {
+        font-size: 56px;
+    }
+    .value__footer {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 1024px) {
+    .value__content {
+        max-width: 80%;
+    }
+}
+
+@media (max-width: 768px) {
+    .value__heading-part {
+        font-size: 40px;
+    }
+
+    .value__off {
+        font-size: 87px;
+        letter-spacing: -0.01em;
+        color: var(--pink-main);
+    }
+    .value__content {
+        padding: 32px 0 237px;
+    }
+}
+
+@media (max-width: 480px) {
+    .value__container {
+        padding: 0 16px;
+    }
+
+    .value__content {
+        max-width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .value__off {
+        font-size: 87px;
+        text-align: center;
+        margin: 16px auto 0;
+    }
+    .value__subscription {
+        font-size: 14px;
+        justify-content: center;
+    }
+    .value__present {
+        left: 50%;
+        right: auto;
+        transform: translateX(-50%);
+        bottom: -30px;
+    }
+    .value__heading-part:nth-child(1),
+    .value__heading-part:nth-child(2) {
+        text-align: center;
+        font-size: 32px;
+    }
+    .value__footer {
+        gap: 24px;
+        align-items: center;
+    }
+    .value__present {
+        width: 220px;
+    }
+}

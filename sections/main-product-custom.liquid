@@ -1,0 +1,144 @@
+{{ 'product-card.css' | asset_url | stylesheet_tag }}
+{{ 'checkbox.css' | asset_url | stylesheet_tag }}
+
+<section class="product-card">
+    <div class="product-card__container _container">
+        <div class="product-card__image">
+            <img src="{{ product.media[1] | img_url: 'master' }}" alt="{{ section.settings.product_image_alt }}" class="">
+        </div>
+      
+        <div class="product-card__content">
+            <div class="product-card__tags">
+                {% for block in section.blocks %}
+                <div class="products-card__tag">
+                    <img src="{{ block.settings.tag_icon | img_url: 'small' }}" alt="{{ block.settings.tag_text }}">
+                    <span>{{ block.settings.tag_text }}</span>
+                </div>
+                {% endfor %}
+            </div>
+        
+            <h2 class="products-card__heading">
+                {{ product.title }}
+            </h2>
+            <div class="products__card-description">
+                {{ product.description }}
+            </div>
+			<div class="product-card__purchase product-card__field">
+				<h3>purchase Options</h3>
+				<label class="product-card__purchase-option checkbox">
+					<input type="radio" checked name="purchase" class="checkbox__circle">
+					<span class="product-card__purchase-title">
+						One-time purchase
+					</span>
+				</label>
+			</div>
+            <div class="product-card__quantity product-card__field">
+                <h3>{{ section.settings.quantity_heading }}</h3>
+                <div class="product-card__number">
+                    <button class="quantity__button" type="button" onclick="updateQuantity(-1)">
+                         —
+                     </button>
+                    <span id="quantity">1</span>
+                    <button class="quantity__button" type="button" onclick="updateQuantity(1)">
+                        +
+                    </button>
+                </div>
+                <div class="product-card__order">
+                    <span class="product-card__price" id="product-price" data-price="{{ product.price | money }}">
+                        {{ product.price | money }}
+                    </span>
+                    <form action="/cart/add" method="post" id="add-to-cart-form">
+                        <input type="hidden" name="id" value="{{ product.variants.first.id }}">
+                        <input type="hidden" name="quantity" id="cart-quantity" value="1">
+                        <button type="submit" class="product-card__button common-button button_animated">
+                            <div class="button__name">
+                                {{ section.settings.add_to_cart_text }}
+                            </div>
+                           <div class="button__icon">
+                                <svg width="23" height="24" viewBox="0 0 23 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M21.9252 10.9412C22.0776 10.9412 22.1538 11.0168 22.1538 11.1681V12.8824C22.1538 13.0336 22.0776 13.1092 21.9252 13.1092H12.2202V23.7731C12.2202 23.9244 12.144 24 11.9915 24H10.2385C10.0692 24 9.98447 23.9244 9.98447 23.7731V13.1092H0.228652C0.0762174 13.1092 0 13.0336 0 12.8824V11.1681C0 11.0168 0.0762174 10.9412 0.228652 10.9412H9.98447V0.226889C9.98447 0.0756298 10.0692 0 10.2385 0H11.9915C12.144 0 12.2202 0.0756298 12.2202 0.226889V10.9412H21.9252Z" />
+                                </svg>
+                           </div>
+                        </button>
+                    </form>
+                    <div class="product-card__shipping">
+                        {% render "icon-shipping" %}
+                        <span>{{ section.settings.shipping_text }}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script>
+    function updateQuantity(change) {
+    const quantityElement = document.getElementById('quantity');
+    const priceElement = document.getElementById('product-price');
+    const priceText = priceElement.dataset.price;
+
+    const regex = /(\D*)([\d,.]+)/;
+    const matches = priceText.match(regex);
+
+    if (matches && matches.length >= 3) {
+        const currencySymbol = matches[1];
+        let priceValue = parseFloat(matches[2].replace(/,/g, ''));
+        
+        let quantity = parseInt(quantityElement.innerText);
+        quantity = Math.max(1, quantity + change);
+
+        const newPrice = priceValue * quantity;
+
+        quantityElement.innerText = quantity;
+        priceElement.innerText = `${currencySymbol}${newPrice.toFixed(2)}`;
+        document.getElementById('cart-quantity').value = quantity;
+    } else {
+        console.error("Неможливо виділити числову частину ціни.");
+    }
+}
+
+</script>
+
+{% schema %}
+{
+    "name": "Product Page Layout",
+    "settings": [        
+        {
+            "type": "text",
+            "id": "quantity_heading",
+            "label": "Quantity Heading",
+            "default": "quantity"
+        },
+        {
+            "type": "text",
+            "id": "add_to_cart_text",
+            "label": "Add to Cart Button Text",
+            "default": "Add to cart"
+        },
+        {
+            "type": "text",
+            "id": "shipping_text",
+            "label": "Shipping Text",
+            "default": "Free shipping over $50"
+        }
+    ],
+    "blocks": [
+        {
+            "type": "tag",
+            "name": "Tag",
+            "settings": [
+                {
+                    "type": "image_picker",
+                    "id": "tag_icon",
+                    "label": "Tag Icon"
+                },
+                {
+                    "type": "text",
+                    "id": "tag_text",
+                    "label": "Tag Text"
+                }
+            ]
+        }
+    ]
+}
+{% endschema %}

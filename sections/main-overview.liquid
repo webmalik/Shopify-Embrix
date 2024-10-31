@@ -1,0 +1,52 @@
+<link rel="stylesheet" href="{{ 'preview.css' | asset_url }}" media="print" onload="this.media='all'">
+
+
+<section class="preview">
+    <div class="preview__bg">
+        <img src="{{ section.settings.bg_image | img_url: 'master' }}" alt="">
+    </div>
+    <div class="preview__container _container">
+        <p class="preview__text">
+            {{ section.settings.text }}
+        </p>
+        <h2 class="preview__heading">
+            {{ section.settings.heading }}
+        </h2>
+        <img src="{{ section.settings.mushroom_image | img_url: 'master' }}" alt="" class="{% if template.suffix == "overview-amanita-muscaria" %}preview__amanita{% endif %} preview__mushroom">
+    </div>
+</section>
+
+{% schema %}
+{
+    "name": "Preview Section",
+    "settings": [
+        {
+            "type": "image_picker",
+            "id": "bg_image",
+            "label": "Background Image"
+        },
+        {
+            "type": "textarea",
+            "id": "text",
+            "label": "Preview Text",
+            "default": "Lion's Mane is the top choice for boosting brain function and neuroprotection"
+        },
+        {
+            "type": "text",
+            "id": "heading",
+            "label": "Heading",
+            "default": "lion’s mane"
+        },
+        {
+            "type": "image_picker",
+            "id": "mushroom_image",
+            "label": "Mushroom Image"
+        }
+    ],
+    "presets": [
+        {
+            "name": "Preview Section"
+        }
+    ]
+}
+{% endschema %}

@@ -1,0 +1,106 @@
+<link rel="stylesheet" href="{{ 'hero.css' | asset_url }}" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="{{ 'hero-mobile.css' | asset_url }}" media="print" onload="this.media='all'">
+
+<section class="hero">
+  <div class="hero__bottles">
+    <img src="{{ section.settings.bottle_image | img_url: 'master' }}" alt="Bottle">
+  </div>
+  <div class="hero__pink-bg">
+    <img src="{{ section.settings.pink_background_image | img_url: 'master' }}" alt="Pink Background">
+  </div>
+  <div class="_container hero__container">
+    <p class="hero__subtext">
+      <img src="{{ 'r-icon.svg' | asset_url }}" alt="">{{ section.settings.subtext }}
+    </p>
+    <div class="hero__content">
+      <img src="{{ section.settings.mushroom_image | img_url: 'master' }}" alt="Mushroom" class="hero__mushroom">
+      <h1 class="hero__heading">
+        Experience<br> the Emberix<br> <span>{{ section.settings.highlighted_word }}</span>
+      </h1>
+      <p class="hero__text">
+        {{ section.settings.description }}
+      </p>
+      <a href="{{ section.settings.button_link }}" class="button button_white hero__button button_animated">
+        <p class="button__name">
+          {{ section.settings.button_text }}
+        </p>
+        <div class="button__jumper"></div>
+        <div class="button__icon">
+          <img src="{{ section.settings.button_icon | img_url: 'master' }}" alt="Button Icon">
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Hero Section",
+  "disabled_on": {
+    "groups": ["header", "footer"]
+  },
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "bottle_image",
+      "label": "Bottle Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "pink_background_image",
+      "label": "Pink Background Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "mushroom_image",
+      "label": "Mushroom Image"
+    },
+    {
+      "type": "text",
+      "id": "subtext",
+      "label": "Subtext",
+      "default": "New generation of food additives"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Experience the Emberix Difference"
+    },
+    {
+      "type": "text",
+      "id": "highlighted_word",
+      "label": "Highlighted Word in Heading",
+      "default": "Difference"
+    },
+    {
+      "type": "text",
+      "id": "description",
+      "label": "Description Text",
+      "default": "Bringing nature’s best to your wellness journey"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button Text",
+      "default": "Shop now"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button Link"
+    },
+    {
+      "type": "image_picker",
+      "id": "button_icon",
+      "label": "Button Icon"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Hero Section"
+      
+    }
+  ]
+}
+{% endschema %}

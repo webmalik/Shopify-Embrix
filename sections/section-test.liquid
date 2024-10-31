@@ -1,0 +1,79 @@
+<link rel="stylesheet" href="{{ 'test.css' | asset_url }}" media="print" onload="this.media='all'">
+
+<section class="test">
+    <div class="test__container _container">
+		<div class="test__wrapper">
+			<div class="test__content">
+				<h2 class="test__heading">{{ section.settings.heading }}</h2>
+				<p class="test__description">{{ section.settings.description }}</p>
+				<img src="{{ section.settings.main_image | img_url: "master" }}" alt="Test Image" class="test__image">
+			</div>
+			<div class="test__blocks">
+				{% for block in section.blocks %}
+				<div class="test__block">
+					<img src="{{ block.settings.icon | img_url: "master" }}" alt="Block Icon" class="test__block-icon">
+					<div class="test__inner">
+						<h3 class="test__block-heading">{{ block.settings.block_heading }}</h3>
+						<p class="test__block-description">{{ block.settings.block_description }}</p>
+					</div>
+				</div>
+				{% endfor %}
+			</div>
+		</div>
+    </div>
+</section>
+
+{% schema %}
+{
+    "name": "Test Section",
+    "settings": [
+        {
+            "type": "text",
+            "id": "heading",
+            "label": "Heading",
+            "default": "How We Test Our Products"
+        },
+        {
+            "type": "textarea",
+            "id": "description",
+            "label": "Description",
+            "default": "Our mushrooms pass more tests than a straight-A student, so we're always confident in the quality and safety of our supplements."
+        },
+        {
+            "type": "image_picker",
+            "id": "main_image",
+            "label": "Main Image"
+        }
+    ],
+    "blocks": [
+        {
+            "type": "test_block",
+            "name": "Test Block",
+            "settings": [
+                {
+                    "type": "image_picker",
+                    "id": "icon",
+                    "label": "Block Icon"
+                },
+                {
+                    "type": "text",
+                    "id": "block_heading",
+                    "label": "Block Heading",
+                    "default": "Purity and Safety"
+                },
+                {
+                    "type": "textarea",
+                    "id": "block_description",
+                    "label": "Block Description",
+                    "default": "We make sure our mushrooms are as pure as they come. Each batch is thoroughly tested to ensure they’re free from any harmful bacteria, mold, or other contaminants."
+                }
+            ]
+        }
+    ],
+    "presets": [
+        {
+            "name": "Test Section"
+        }
+    ]
+}
+{% endschema %}

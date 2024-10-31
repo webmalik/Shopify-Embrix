@@ -1,0 +1,49 @@
+{% comment %}
+  Renders an article card for a given blog article.
+
+  Accepts:
+  - article: {Object} Article object to be rendered.
+  - show_reading_time: {Boolean} If true, shows the reading time for the article. Default: false.
+  - button_text: {String} Custom text for the read button. If not provided, defaults to "Read".
+
+  Usage:
+  {% render 'article-card', article: article, show_reading_time: section.settings.show_reading_time, button_text: section.settings.button_text %}
+{% endcomment %}
+
+<article class="chronicles__item article">
+  <div class="article__image">
+    <img src="{{ article.image | img_url: 'master' }}" alt="{{ article.title }}">
+  </div>
+  <div class="article__content">
+	{% if show_reading_time %}
+      <p class="article__reading-time">
+        {{ article.metafields.custom.reading_time }} min
+      </p>
+    {% endif %}
+	<div>
+		<h3 class="article__title">
+		  {{ article.title }}
+		</h3>
+		<p class="article__text">
+			{%- if article.excerpt.size > 0 -%}
+			  {{ article.excerpt | strip_html | truncatewords: 30 }}
+			{%- else -%}
+			  {{ article.content | strip_html | truncatewords: 30 }}
+			{%- endif -%}
+		</p>
+	</div>
+    <a href="{{ article.url }}" class="article__button button button_animated">
+      <p class="button__name">
+        {%- if button_text != null -%}
+          {{ button_text }}
+        {%- else -%}
+          Read
+        {%- endif -%}
+      </p>
+      <div class="button__jumper"></div>
+      <div class="button__icon">
+        <img src="{{ 'button-icon.svg' | asset_url }}" alt="">
+      </div>
+    </a>
+  </div>
+</article>

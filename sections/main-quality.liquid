@@ -1,0 +1,76 @@
+{{ 'quality.css' | asset_url | stylesheet_tag }}
+
+
+<section class="quality">
+    <div class="quality__bg">
+        <picture>
+            <source srcset="{{ section.settings.bg_image_desktop | img_url:"master" }}" media="(min-width: 768px)">
+            <img src="{{ section.settings.bg_image_mobile | img_url:"master" }}" alt="">
+        </picture>
+    </div>
+	<div class="quality__inner">
+		<div class="quality__container _container">
+			<div class="quality__wrapper">
+				<div class="quality__content">
+					<h2 class="quality__heading">
+						<span>{{ section.settings.heading_highlight }}</span> {{ section.settings.heading_main }}
+					</h2>
+					<p class="quality__text">
+						{{ section.settings.description }}
+					</p>
+				</div>
+				<div class="quality__note">
+					<img src="{{ section.settings.note_icon | img_url:"master" }}" alt="" class="quality__note-icon">
+					<span>{{ section.settings.note_text }}</span>
+				</div>
+			</div>
+		</div>
+    </div>
+</section>
+
+{% schema %}
+{
+    "name": "Quality Section",
+    "settings": [
+		{
+            "type": "image_picker",
+            "id": "bg_image_desktop",
+            "label": "Background Image Desktop"
+        },
+        {
+            "type": "image_picker",
+            "id": "bg_image_mobile",
+            "label": "Background Image Mobile"
+        },
+        {
+            "type": "text",
+            "id": "heading_highlight",
+            "label": "Highlighted Heading",
+            "default": "Raised with love"
+        },
+        {
+            "type": "text",
+            "id": "heading_main",
+            "label": "Main Heading",
+            "default": "for nature"
+        },
+        {
+            "type": "textarea",
+            "id": "description",
+            "label": "Description",
+            "default": "We care about being eco-friendly. We work super hard to make top quality products without hurting the environment."
+        },
+        {
+            "type": "image_picker",
+            "id": "note_icon",
+            "label": "Note Icon"
+        },
+        {
+            "type": "text",
+            "id": "note_text",
+            "label": "Note Text",
+            "default": "Our mushrooms grow naturally without the use of chemicals. We only provide the natural conditions for their growth."
+        }
+    ]
+}
+{% endschema %}

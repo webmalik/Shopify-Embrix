@@ -1,0 +1,109 @@
+.dropdown-menu {
+    background-color: black;
+    position: relative;
+    z-index: 2;
+}
+
+.dropdown-menu {
+    padding: 40px 0;
+}
+
+.dropdown-menu__items {
+    display: flex;
+    gap: 24px;
+}
+
+.dropdown-menu__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    width: 190px;
+}
+
+.dropdown-menu__item img {
+    height: 179px;
+    width: auto;
+}
+
+.header__dropdown-menu__outer {
+}
+
+.dropdown-menu__title {
+    font-family: 'Coolvetica';
+    font-size: 64px;
+    font-weight: 800;
+    text-transform: uppercase;
+    transition: all 0.2s ease-in-out;
+}
+.dropdown-menu__item:hover .dropdown-menu__title {
+    color: var(--pink-main);
+}
+
+.learn-dropdown {
+    background-color: transparent;
+    padding: 0;
+    margin-left: 131px;
+    width: fit-content;
+}
+
+.learn-dropdown ._container {
+    width: fit-content;
+    margin-left: 0;
+    padding: 0;
+}
+
+.learn-dropdown .dropdown-menu__items {
+    /* padding: 40px 32px 32px; */
+    gap: 16px;
+
+    padding: 40px 32px 32px;
+    width: fit-content;
+    background-color: black;
+    flex-direction: column;
+}
+
+.learn-dropdown .dropdown-menu__item {
+    font-family: 'Coolvetica';
+    font-size: 18px;
+    line-height: 1.1;
+    justify-content: flex-start;
+    width: auto;
+}
+
+.learn-dropdown .dropdown-menu__item a {
+    margin-left: 0;
+    width: 100%;
+    text-wrap: nowrap;
+    transition: all 0.2s ease-in-out;
+}
+.learn-dropdown .dropdown-menu__item a:hover {
+    color: var(--pink-main);
+}
+
+@media (max-width: 982px) {
+    .dropdown-menu__item {
+        width: auto;
+    }
+    .dropdown-menu__item img {
+        height: 100px;
+        width: auto;
+    }
+    .dropdown-menu__title {
+        font-size: 42px;
+    }
+    .learn-dropdown {
+        margin-left: 0;
+    }
+    .learn-dropdown .dropdown-menu__items {
+        background-color: transparent;
+        padding: 8px 0;
+        gap: 7px;
+    }
+    .header__dropdown-menu__outer {
+        margin-top: 8px;
+    }
+    .header__dropdown-menu__outer ._container {
+        padding: 0;
+    }
+}

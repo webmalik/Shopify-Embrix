@@ -1,0 +1,341 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-product-custom",
+      "blocks": {
+        "tag_phxHLj": {
+          "type": "tag",
+          "settings": {
+            "tag_icon": "shopify:\/\/shop_images\/icon-focus.svg",
+            "tag_text": "Focus"
+          }
+        },
+        "tag_N6XkXb": {
+          "type": "tag",
+          "settings": {
+            "tag_icon": "shopify:\/\/shop_images\/icon-clarity.svg",
+            "tag_text": "Clarity"
+          }
+        },
+        "tag_MJAfbF": {
+          "type": "tag",
+          "settings": {
+            "tag_icon": "shopify:\/\/shop_images\/icon-mood.svg",
+            "tag_text": "Mood"
+          }
+        }
+      },
+      "block_order": [
+        "tag_phxHLj",
+        "tag_N6XkXb",
+        "tag_MJAfbF"
+      ],
+      "settings": {
+        "quantity_heading": "quantity",
+        "add_to_cart_text": "Add to cart",
+        "shipping_text": "Free shipping over $50"
+      }
+    },
+    "section_benefit_VEagVw": {
+      "type": "section-benefit",
+      "blocks": {
+        "benefits_item_pnxhNn": {
+          "type": "benefits_item",
+          "settings": {
+            "effect": "#1",
+            "image": "shopify:\/\/shop_images\/benefits-image-1.png",
+            "description": "Reduces your stress"
+          }
+        },
+        "benefits_item_9k3Eib": {
+          "type": "benefits_item",
+          "settings": {
+            "effect": "#2",
+            "image": "shopify:\/\/shop_images\/benefits-image-2.png",
+            "description": "Increases energy level"
+          }
+        },
+        "benefits_item_drXkDE": {
+          "type": "benefits_item",
+          "settings": {
+            "effect": "#3",
+            "image": "shopify:\/\/shop_images\/benefits-image-3.png",
+            "description": "Increases your productivity"
+          }
+        }
+      },
+      "block_order": [
+        "benefits_item_pnxhNn",
+        "benefits_item_9k3Eib",
+        "benefits_item_drXkDE"
+      ],
+      "settings": {
+        "subheading": "from shrooms",
+        "show_header": false
+      }
+    },
+    "section_details_nwWzi8": {
+      "type": "section-details",
+      "blocks": {
+        "details_item_BhY6U3": {
+          "type": "details_item",
+          "settings": {
+            "title": "Overview",
+            "text": "Lion's Mane is a brain-boosting mushroom. It helps improve your thinking, clarity, and mood. Packed into a natural, plant-based capsule, this mushroom will keep your mind healthy and active"
+          }
+        },
+        "details_item_g4byDk": {
+          "type": "details_item",
+          "settings": {
+            "title": "Ingredients",
+            "text": "Organic Lion's Mane Extract (standardized to contain 31% Beta-Glucan)(Hericium erinaceus)(Fruiting Body), Pullulan Capsule"
+          }
+        },
+        "details_item_TJbLfc": {
+          "type": "details_item",
+          "settings": {
+            "title": "Directions",
+            "text": "A bottle includes 60 capsules. You can take them whenever it suits you, either with food or on an empty stomach"
+          }
+        }
+      },
+      "block_order": [
+        "details_item_BhY6U3",
+        "details_item_g4byDk",
+        "details_item_TJbLfc"
+      ],
+      "settings": {
+        "bg_image": "shopify:\/\/shop_images\/bg-image.png"
+      }
+    },
+    "section_advantages_CgeLRy": {
+      "type": "section-advantages",
+      "blocks": {
+        "advantage_item_chCeCy": {
+          "type": "advantage_item",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/item-icon-1.svg",
+            "text": "Cruelty free"
+          }
+        },
+        "advantage_item_NJFfHH": {
+          "type": "advantage_item",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/item-icon-2.svg",
+            "text": "EU certificated"
+          }
+        },
+        "advantage_item_NMWgdQ": {
+          "type": "advantage_item",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/item-icon-3.svg",
+            "text": "Premium quality"
+          }
+        },
+        "advantage_item_gtGkLf": {
+          "type": "advantage_item",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/item-icon-4.svg",
+            "text": "Non-GMO"
+          }
+        },
+        "advantage_item_UDzweR": {
+          "type": "advantage_item",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/item-icon-5.svg",
+            "text": "100% organic"
+          }
+        },
+        "advantage_item_NkbJQn": {
+          "type": "advantage_item",
+          "settings": {
+            "icon": "shopify:\/\/shop_images\/item-icon-6.svg",
+            "text": "Gluten Free"
+          }
+        }
+      },
+      "block_order": [
+        "advantage_item_chCeCy",
+        "advantage_item_NJFfHH",
+        "advantage_item_NMWgdQ",
+        "advantage_item_gtGkLf",
+        "advantage_item_UDzweR",
+        "advantage_item_NkbJQn"
+      ],
+      "settings": {
+        "button_link": "shopify:\/\/pages\/quality",
+        "persent": "100%",
+        "heading": "safe and organic",
+        "text": "Our mushrooms are as organic as grandma’s home-baked cookies. Grown without any nasty chemicals, we ensure that each mushroom is rigorously tested and safe for consumption.",
+        "button_text": "learn more"
+      }
+    },
+    "section_faq_mELHY9": {
+      "type": "section-faq",
+      "blocks": {
+        "faq_item_bryn47": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Are your products safe?",
+            "answer": "The recommended dosage is on the package. Usually, you take them once or twice a day with meals. But for the best results, just follow the instructions on the label. Easy peasy!"
+          }
+        },
+        "faq_item_H4nyk7": {
+          "type": "faq_item",
+          "settings": {
+            "question": "How do I take your supplements?",
+            "answer": "The recommended dosage is on the package. Usually, you take them once or twice a day with meals. But for the best results, just follow the instructions on the label. Easy peasy!"
+          }
+        },
+        "faq_item_k9VRd3": {
+          "type": "faq_item",
+          "settings": {
+            "question": "How soon will I see results?",
+            "answer": "The recommended dosage is on the package. Usually, you take them once or twice a day with meals. But for the best results, just follow the instructions on the label. Easy peasy!"
+          }
+        },
+        "faq_item_4hcX8a": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Can I take your supplements with other medications?",
+            "answer": "The recommended dosage is on the package. Usually, you take them once or twice a day with meals. But for the best results, just follow the instructions on the label. Easy peasy!"
+          }
+        },
+        "faq_item_RRDtzm": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Can I return the product if it doesn’t work for me?",
+            "answer": "The recommended dosage is on the package. Usually, you take them once or twice a day with meals. But for the best results, just follow the instructions on the label. Easy peasy!"
+          }
+        },
+        "faq_item_yjFbUc": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Are Emberix's products vegan?",
+            "answer": "The recommended dosage is on the package. Usually, you take them once or twice a day with meals. But for the best results, just follow the instructions on the label. Easy peasy!"
+          }
+        },
+        "faq_item_mtKVfx": {
+          "type": "faq_item",
+          "settings": {
+            "question": "How should I store your supplements?",
+            "answer": "The recommended dosage is on the package. Usually, you take them once or twice a day with meals. But for the best results, just follow the instructions on the label. Easy peasy!"
+          }
+        },
+        "faq_item_M339xf": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Do you offer international shipping?",
+            "answer": "The recommended dosage is on the package. Usually, you take them once or twice a day with meals. But for the best results, just follow the instructions on the label. Easy peasy!"
+          }
+        }
+      },
+      "block_order": [
+        "faq_item_bryn47",
+        "faq_item_H4nyk7",
+        "faq_item_k9VRd3",
+        "faq_item_4hcX8a",
+        "faq_item_RRDtzm",
+        "faq_item_yjFbUc",
+        "faq_item_mtKVfx",
+        "faq_item_M339xf"
+      ],
+      "settings": {
+        "heading_image": "shopify:\/\/shop_images\/heading.svg"
+      }
+    },
+    "section_review_WxzTAU": {
+      "type": "section-review",
+      "blocks": {
+        "review_item_8x3azb": {
+          "type": "review_item",
+          "settings": {
+            "product_name": "Product: Lion’s mane",
+            "title": "I was initially skeptical about an all-natural product, given the mixed reviews, but I decided to give it a shot.",
+            "text": "I'm glad I did because I've noticed a significant boost in my energy levels and overall well-being.\"",
+            "avatar": "shopify:\/\/shop_images\/1_a9332fe8-449f-4221-bbde-9ed25f0608a5.png",
+            "name": "Renata Molchanova"
+          }
+        },
+        "review_item_WQrLGg": {
+          "type": "review_item",
+          "settings": {
+            "product_name": "Product: Lion’s mane",
+            "title": "This stuff is amazing! I've been taking it for three months, and I can genuinely feel the difference in my daily life.",
+            "text": "No more brain fatigue, and my health has definitely improved.",
+            "avatar": "shopify:\/\/shop_images\/2_e4f1298f-dd30-426c-9e2e-f46b4d76f80f.png",
+            "name": "Denys Dream"
+          }
+        },
+        "review_item_dwDG94": {
+          "type": "review_item",
+          "settings": {
+            "product_name": "Product: Lion’s mane",
+            "title": "I often hit creative blocks where I can't come up with any ideas,",
+            "text": "but since adding Lion's mane to my diet, I've noticed a surge in good ideas and a significant boost in my creativity.",
+            "avatar": "shopify:\/\/shop_images\/3.png",
+            "name": "Frank Uver"
+          }
+        },
+        "review_item_yNJkea": {
+          "type": "review_item",
+          "settings": {
+            "product_name": "Product: Lion’s mane",
+            "title": "I recently decided to get into fitness, and it was harder than I expected.",
+            "text": " I often felt drained and struggled to recover after intense workouts. After finding an article about Lion's mane, I gave it a try, and soon after, I felt more energetic and well-rested. I highly recommend it to anyone looking to improve their life.",
+            "avatar": "shopify:\/\/shop_images\/4.png",
+            "name": "Dmitry Tretniev"
+          }
+        },
+        "review_item_KwtpEi": {
+          "type": "review_item",
+          "settings": {
+            "product_name": "Product: Lion’s mane",
+            "title": "I've been using these for a week now and I feel way more focused at work.",
+            "text": "I don't get as tired or irritable anymore either. No more brain fog since I started, so I highly recommend them.",
+            "avatar": "shopify:\/\/shop_images\/5.png",
+            "name": "Alex Thompson"
+          }
+        }
+      },
+      "block_order": [
+        "review_item_8x3azb",
+        "review_item_WQrLGg",
+        "review_item_dwDG94",
+        "review_item_yNJkea",
+        "review_item_KwtpEi"
+      ],
+      "settings": {
+        "heading": "How people feel about  the product?"
+      }
+    },
+    "section_contact_form_wgAifM": {
+      "type": "section-contact-form",
+      "settings": {
+        "heading": "Got Questions?",
+        "subheading": "We’ve Got Answers!",
+        "text": "Feel free to reach out to us. We're here to help and ensure you get the answers you need.",
+        "placeholder_name": "Name",
+        "placeholder_email": "E-mail",
+        "placeholder_phone": "Phone Number",
+        "button_text": "send"
+      }
+    },
+    "172861413864e231b9": {
+      "type": "apps",
+      "settings": {
+        "include_margins": true
+      }
+    }
+  },
+  "order": [
+    "main",
+    "section_benefit_VEagVw",
+    "section_details_nwWzi8",
+    "section_advantages_CgeLRy",
+    "section_faq_mELHY9",
+    "section_review_WxzTAU",
+    "section_contact_form_wgAifM",
+    "172861413864e231b9"
+  ]
+}

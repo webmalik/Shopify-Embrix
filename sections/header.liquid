@@ -1,0 +1,228 @@
+<link rel="stylesheet" href="{{ 'header.css' | asset_url }}" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="{{ 'header-mobile.css' | asset_url }}" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="{{ 'dropdown-menu.css' | asset_url }}" media="print" onload="this.media='all'">
+
+<script src="{{ 'header.js' | asset_url }}" defer="defer"></script>
+
+{%- liquid
+  for block in section.blocks
+    if block.type == '@app'
+      assign has_app_block = true
+    endif
+  endfor
+-%}
+
+<header class="header" id="header">
+	<div class="header__container _container">
+		<nav class="menu header__menu">
+			<div class="header__head-mobile">
+				<span>menu</span>
+				<a href="#" class="header__close">
+					{%  render 'header-close' %}
+				</a>
+			</div>
+			<ul class="menu__list">
+				{% for link in linklists.main-menu.links %}
+					<li class="menu__item {% if link.links.size > 0 %}dropdown{% endif %}">
+					{% if link.links.size > 0 %}
+						<div href="{{ link.url }}" class="header__button header__button_dropdown button">
+						<p class="button__name">{{ link.title }}</p>
+						<div class="button__jumper"></div>
+						<div class="button__icon">
+							{% render "cross-icon" %}
+						</div>
+						</div>
+						{% if link.title == "Learn" %}
+							<div class="header__dropdown-menu__outer">
+								<div class="_container">
+									<div class="header__dropdown-menu__wrapper dropdown-menu learn-dropdown">
+										<div class="dropdown-menu__container _container">
+											<ul class="dropdown-menu__items">
+												{% for sublink in link.links %}
+												<li class="dropdown-menu__item">
+													<a href="{{ sublink.url }}">
+													{% if sublink.image %}
+														<img src="{{ sublink.image | img_url: '300x300' }}" alt="{{ sublink.title }}" class="dropdown-menu__image">
+													{% endif %}
+													{{ sublink.title }}
+													{% comment %} <h3 class="dropdown-menu__title"></h3> {% endcomment %}
+													</a>
+												</li>
+												{% endfor %}
+											</ul>
+										</div>
+									</div>
+								</div>
+							</div>
+						{% else %}
+							<div class="header__dropdown-menu__outer">
+								<div class="header__dropdown-menu__wrapper dropdown-menu">
+									<div class="dropdown-menu__container _container">
+										<ul class="dropdown-menu__items">
+											{% for sublink in link.links %}
+											<li class="dropdown-menu__item">
+												<a href="{{ sublink.url }}">
+												{% if sublink.title == "All" %}
+													<img src="{{ section.settings.shop_all | img_url: '300x300' }}" alt="{{ sublink.title }}" class="dropdown-menu__image">
+													<h3 class="dropdown-menu__title">shop all</h3>
+												{% endif %}
+												{% if sublink.title == "Lion's Mane" %}
+													<img src="{{ section.settings.shop_lions | img_url: '300x300' }}" alt="{{ sublink.title }}" class="dropdown-menu__image">
+													<h3 class="dropdown-menu__title">Lion's Mane</h3>
+												{% endif %}
+												{% if sublink.title == "Amanita Muscaria" %}
+													<img src="{{ section.settings.shop_amanita | img_url: '300x300' }}" alt="{{ sublink.title }}" class="dropdown-menu__image">
+													<h3 class="dropdown-menu__title">Amanita</h3>
+												{% endif %}
+												
+												</a>
+											</li>
+											{% endfor %}
+										</ul>
+									</div>
+								</div>
+						</div>
+						{% endif %}
+						
+					
+					{% else %}
+						<a href="{{ link.url }}" class="header__button button">
+						<p class="button__name">{{ link.title }}</p>
+						</a>
+					{% endif %}
+					
+					</li>
+				{% endfor %}
+			</ul>
+
+			<div class="header__footer-mobile">
+				{{ section.settings.mobile_text-1 }}
+				<span>{{ section.settings.mobile_text-2 }}</span>
+			</div>
+		</nav>
+		<div class="header__burger">
+			{% render "header-burger" %}
+		</div>
+		<a href="{{ shop.url }}" class="header__logo">
+			{% if section.settings.header_logo %}
+				<img src="{{ section.settings.header_logo | img_url: 'medium' }}" alt="Logo">
+			{% endif %}
+		</a>
+		<button class="header__button header__cart cart__open button">
+			<p class="button__name">
+				{{ section.settings.card_text }}
+			</p>
+			<div class="button__jumper"></div>
+			<div class="button__icon">
+				{% render "cart-icon" %}
+			</div>
+		</button>
+	</div>
+</header>
+
+{%- if settings.cart_type == "notification" -%}
+  {%- render 'cart-notification', color_scheme: section.settings.color_scheme, desktop_menu_type: section.settings.menu_type_desktop -%}
+{%- endif -%}
+
+<script type="application/ld+json">
+  {
+    "@context": "http://schema.org",
+    "@type": "Organization",
+    "name": {{ shop.name | json }},
+    {% if settings.logo %}
+      "logo": {{ settings.logo | image_url: width: 500 | prepend: "https:" | json }},
+    {% endif %}
+    "sameAs": [
+      {{ settings.social_twitter_link | json }},
+      {{ settings.social_facebook_link | json }},
+      {{ settings.social_pinterest_link | json }},
+      {{ settings.social_instagram_link | json }},
+      {{ settings.social_tiktok_link | json }},
+      {{ settings.social_tumblr_link | json }},
+      {{ settings.social_snapchat_link | json }},
+      {{ settings.social_youtube_link | json }},
+      {{ settings.social_vimeo_link | json }}
+    ],
+    "url": {{ request.origin | append: page.url | json }}
+  }
+</script>
+
+{%- if request.page_type == 'index' -%}
+  {% assign potential_action_target = request.origin | append: routes.search_url | append: "?q={search_term_string}" %}
+  <script type="application/ld+json">
+    {
+      "@context": "http://schema.org",
+      "@type": "WebSite",
+      "name": {{ shop.name | json }},
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": {{ potential_action_target | json }},
+        "query-input": "required name=search_term_string"
+      },
+      "url": {{ request.origin | append: page.url | json }}
+    }
+  </script>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "t:sections.header.name",
+  "class": "section-header",
+  "max_blocks": 3,
+  "settings": [
+    {
+		"type": "link_list",
+		"id": "menu",
+		"default": "main-menu",
+		"label": "t:sections.header.settings.menu.label"
+    },
+    {
+		"type": "image_picker",
+		"id": "header_logo",
+		"label": "Header Logo"
+    },
+	{
+		"type": "text",
+		"id": "card_text",
+		"default": "Cart",
+		"label": "Card button text"
+	},
+	{
+		"type": "text",
+		"id": "mobile_text-1",
+		"default": "Feeling worn out?",
+		"label": "Mobile footer text 1"
+	},
+	{
+		"type": "text",
+		"id": "mobile_text-2",
+		"default": "Let's change that!",
+		"label": "Mobile footer text 2"
+	},
+	{
+		"type": "header",
+		"content": "Image for shop menu"
+    },
+	{
+		"type": "image_picker",
+		"id": "shop_all",
+		"label": "Shop all"
+    },
+	{
+		"type": "image_picker",
+		"id": "shop_lions",
+		"label": "Shop Lion's Mane"
+    },
+	{
+		"type": "image_picker",
+		"id": "shop_amanita",
+		"label": "Shop Amanita Muscaria"
+    },
+  ],
+  "blocks": [
+    {
+      "type": "@app"
+    }
+  ]
+}
+{% endschema %}

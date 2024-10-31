@@ -1,0 +1,83 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-overview",
+      "settings": {
+        "bg_image": "shopify:\/\/shop_images\/bg_f56d39f9-eb6c-497d-bc58-3f01bd4c8f5d.jpg",
+        "text": "Lion's Mane is the top choice for boosting brain function and neuroprotection",
+        "heading": "lion’s mane",
+        "mushroom_image": "shopify:\/\/shop_images\/mushroom-1.png"
+      }
+    },
+    "section_mind_RtC7FB": {
+      "type": "section-mind",
+      "settings": {
+        "bg_image_1": "shopify:\/\/shop_images\/bg-image-1.jpg",
+        "bg_image_2": "shopify:\/\/shop_images\/bg-image-2.jpg",
+        "subheading_icon": "shopify:\/\/shop_images\/subheading-icon.svg",
+        "subheading": "The Mushroom Marvel",
+        "heading_part_1": "for Mind",
+        "heading_part_2": "Body!",
+        "text": "Meet the Lion’s Mane mushroom, your brain’s new best friend! As a natural brain charger, it helps you with memory and concentration. Feeling a bit down? Lion’s Mane can lift your spirits, acting like a little cheerleader for your brain to help you feel happier and more relaxed. It also protects your nerves, encouraging the growth of new ones and giving your immune system a boost.",
+        "button_text": "shop now",
+        "shop_now_link": "shopify:\/\/products\/lion-s-mane"
+      }
+    },
+    "section_about_overview_488EGW": {
+      "type": "section-about-overview",
+      "settings": {
+        "main_image": "shopify:\/\/shop_images\/main-image_4798db75-1f0a-45a6-b5a6-69185827b527.png",
+        "bg_svg": "shopify:\/\/shop_images\/bg.svg",
+        "about_heading": "Lion’s Mane: The Fuzzy Brain Booster",
+        "about_text": "Lion's Mane mushroom has been a staple of Chinese and Japanese medicine for centuries, celebrated for its ability to sharpen mental clarity and improve concentration.\n<br><br><span>\nKnown as 'Hou Tou Gu' in China and 'Yamabushitake' in Japan, it was particularly favored for enhancing meditation practice.\n<\/span> <br><br>\nWhile our ancestors could only guess at the mushroom's benefits, modern science is now confirming its neuroprotective and cognitive effects, cementing its reputation as a powerful health enhancer."
+      }
+    },
+    "section_science_gKhRe9": {
+      "type": "section-science",
+      "settings": {
+        "bg_image": "shopify:\/\/shop_images\/bg_88b6bc63-3322-4aa9-838e-4ed8388bc6f9.jpg",
+        "bg_image_mobile": "shopify:\/\/shop_images\/view-mushrooms-nature_2.jpg",
+        "heading_highlight": "Science-Backed",
+        "heading": "Benefits of Lion's Mane Mushroom",
+        "text": "Lion’s Mane mushroom has shown promising effects in enhancing cognitive functions. Research indicates that consuming Lion’s Mane can improve working memory, complex attention, and reaction time within just 2 hours. It also appears to boost feelings of happiness during the same period.",
+        "studies_link": "https:\/\/www.ncbi.nlm.nih.gov\/pmc\/articles\/PMC10675414\/",
+        "studies_icon": "shopify:\/\/shop_images\/studies-icon.svg",
+        "studies_text": "Studies",
+        "studies_reference": "Docherty S, Doughty FL, Smith EF. The Acute and Chronic Effects of Lion's Mane Mushroom Supplementation on Cognitive Function, Stress and Mood in Young Adults: A Double-Blind, Parallel Groups, Pilot Study. Nutrients. 2023 Nov 20;15(22):4842. doi: 10.3390\/nu15224842. PMID: 38004235; PMCID: PMC10675414."
+      }
+    },
+    "section_blog_slider_Vi9Hfj": {
+      "type": "section-blog-slider",
+      "settings": {
+        "show_header_Blog": true,
+        "heading": "Mushroom Chronicles",
+        "all_articles_link": "shopify:\/\/blogs\/all",
+        "all_articles_text": "All Articles",
+        "selected_blog": "all",
+        "max_articles": 3,
+        "button_text": "Read",
+        "show_reading_time": true
+      }
+    },
+    "section_action_U3kpqy": {
+      "type": "section-action",
+      "settings": {
+        "product_image": "shopify:\/\/shop_images\/lions-bottle-mushroom.png",
+        "heading": "Don't wait",
+        "text": "— take the step towards a sharper, more balanced you today.",
+        "selected_product": "lion-s-mane",
+        "add_to_cart_text": "Add to cart",
+        "learn_more_text": "Learn more",
+        "learn_more_link": "shopify:\/\/products\/lion-s-mane"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "section_mind_RtC7FB",
+    "section_about_overview_488EGW",
+    "section_science_gKhRe9",
+    "section_blog_slider_Vi9Hfj",
+    "section_action_U3kpqy"
+  ]
+}

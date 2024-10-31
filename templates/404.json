@@ -1,0 +1,16 @@
+{
+  "layout": "404",
+  "sections": {
+    "main": {
+      "type": "main-404",
+      "settings": {
+        "button_text": "To main page",
+        "button_link": "\/",
+        "button_icon": "shopify:\/\/shop_images\/button-icon.svg"
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

@@ -1,0 +1,83 @@
+<link rel="stylesheet" href="{{ 'organic.css' | asset_url }}" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="{{ 'organic-mobile.css' | asset_url }}" media="print" onload="this.media='all'">
+
+<section class="organic">
+  <div class="organic__bg abs">
+    <picture>
+      <source srcset="{{ section.settings.background_image_mobile | img_url: 'master' }}" media="(max-width: 480px)">
+      <img src="{{ section.settings.background_image | img_url: 'master' }}" alt="">
+    </picture>
+  </div>
+  <div class="organic__container _container">
+    <div class="organic__content">
+      <h2 class="organic__heading">
+        {{ section.settings.heading }}
+      </h2>
+	  <div class="organic__inner">
+		  <p class="organic__text">
+			{{ section.settings.text }}
+		  </p>
+		  <a href="{{ section.settings.button_link }}" class="organic__button button button_animated button_white">
+			<p class="button__name">
+			  {{ section.settings.button_text }}
+			</p>
+			<div class="button__jumper"></div>
+			<div class="button__icon">
+			  <img src="{{ section.settings.button_icon | img_url: 'master' }}" alt="">
+			</div>
+		  </a>
+	  </div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Organic Section",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "background_image",
+      "label": "Background Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "background_image_mobile",
+      "label": "Mobile Background Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "button_icon",
+      "label": "Button Icon"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Organic shrooms from the <span>European</span> mountains"
+    },
+    {
+      "type": "text",
+      "id": "text",
+      "label": "Text",
+      "default": "Our mushrooms are grown by nature, without harmful chemicals"
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button Text",
+      "default": "Learn more"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button Link"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Organic Section"
+    }
+  ]
+}
+{% endschema %}

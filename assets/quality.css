@@ -1,0 +1,104 @@
+.quality {
+    position: relative;
+}
+.quality__bg {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-height: 100dvh;
+    overflow: hidden;
+}
+.quality__bg img {
+    width: auto;
+    max-height: 1024px;
+}
+.quality__inner {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+.quality__container {
+    height: 100%;
+}
+.quality__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 50px;
+    height: 100%;
+    padding-bottom: 150px;
+}
+.quality__content {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    max-width: 518px;
+}
+.quality__heading {
+    font-family: var(--second-family);
+    font-weight: 400;
+    font-size: clamp(42px, 6vw, 82px);
+    line-height: 90%;
+    letter-spacing: -0.01em;
+    color: var(--pink-main);
+    text-align: left;
+}
+.quality__heading span {
+    color: #fff;
+}
+.quality__text {
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: clamp(14px, 1vw, 16px);
+    line-height: 140%;
+    letter-spacing: 0.07em;
+    color: #fff;
+}
+.quality__note {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 431px;
+    gap: 26px;
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: clamp(14px, 1vw, 16px);
+    line-height: 140%;
+    letter-spacing: 0.07em;
+    color: #fff;
+}
+.quality__note-icon img {
+    max-width: clamp(52px, 6vw, 64px);
+}
+
+@media (max-width: 767px) {
+    .quality__bg {
+        padding-bottom: 60px;
+        background-color: #000;
+    }
+
+    .quality__bg img {
+        width: 100%;
+        max-height: 100%;
+    }
+
+    .quality__content {
+        gap: 16px;
+    }
+
+    .quality__wrapper {
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: flex-start;
+        padding-bottom: 60px;
+        gap: 24px;
+    }
+
+    .quality__note {
+        gap: 16px;
+        color: var(--pink-main);
+    }
+}

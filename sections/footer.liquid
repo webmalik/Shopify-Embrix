@@ -1,0 +1,99 @@
+<link rel="stylesheet" href="{{ 'slider-button.css' | asset_url }}" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="{{ 'footer.css' | asset_url }}" media="print" onload="this.media='all'">
+
+<footer class="footer">
+	{% if section.settings.footer_logo %}
+		<img src="{{ section.settings.footer_logo | img_url: 'medium' }}" alt="Logo" class="footer__logo">
+	{% endif %}     
+	<div class="footer__container _container">
+		<a href="#header">
+			<button class="footer__up slider-button">
+				<img src="{{'arrow-black.svg' | asset_url}}" alt="">
+				<img src="{{'arrow-white.svg' | asset_url}}" alt="">
+			</button>
+		</a>
+		
+		<h3 class="footer__subheading">
+			{{section.settings.text-1}}<br>
+			<span>{{section.settings.text-2}}</span>
+		</h3>
+		<nav class="footer__links">
+			{% for block in section.blocks %}
+				<ul>
+				{% for link in linklists[block.settings.menu].links %}
+					<li>
+					<a href="{{ link.url }}">{{ link.title }}</a>
+					</li>
+				{% endfor %}
+				</ul>
+			{% endfor %}
+		</nav>
+		<div class="footer__bottom">
+			<div class="footer__bottom-links">
+				{%- for policy in shop.policies -%}
+					{%- if policy != blank -%}
+						<a href="{{ policy.url }}" class="footer__bottom-link">{{ policy.title | escape }}</a>
+					{%- endif -%}
+				{%- endfor -%}
+			</div>
+			
+			<p class="footer__rights">&copy; {{ 'now' | date: '%Y' }}, {{ shop.name | link_to: routes.root_url -}}&nbsp rights reserved.</p>
+		</div>
+	</div>
+</footer>
+
+{% schema %}
+{
+  "name": "t:sections.footer.name",
+  "blocks": [
+    {
+      "type": "@app"
+    },
+    {
+      "type": "link_list",
+      "name": "t:sections.footer.blocks.link_list.name",
+      "settings": [
+        {
+          "type": "link_list",
+          "id": "menu",
+          "default": "footer",
+          "label": "t:sections.footer.blocks.link_list.settings.menu.label",
+          "info": "t:sections.footer.blocks.link_list.settings.menu.info"
+        }
+      ]
+    }
+  ],
+  "settings": [
+	{
+		"type": "image_picker",
+		"id": "footer_logo",
+		"label": "Footer Logo"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_policy",
+      "default": true,
+      "label": "t:sections.footer.settings.show_policy.label"
+    },
+	{
+		"type": "text",
+		"id": "text-1",
+		"default": "Feeling worn out?",
+		"label": "Footer text 1"
+	},
+	{
+		"type": "text",
+		"id": "text-2",
+		"default": "Let's change that!",
+		"label": "Footer text 2"
+	},
+  ],
+  "default": {
+    "blocks": [
+      {
+        "type": "link_list"
+      }
+    ]
+  }
+}
+{% endschema %}

@@ -1,0 +1,20 @@
+.thank-page{
+    background: var(--pink-main);
+   
+}
+
+.thank-page__heading{
+    font-size: 'Coolvetica';
+    font-size: 200px;
+    text-transform: uppercase;
+    letter-spacing: -3.38px;
+    line-height: 0.8;
+    font-weight: 800;
+    color: white;
+    
+}
+
+.button.thank-page__button:hover .button__name,
+.button.thank-page__button:hover .button__jumper{
+    background-color: black;
+}

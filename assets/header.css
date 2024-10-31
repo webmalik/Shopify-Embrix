@@ -1,0 +1,147 @@
+.header {
+    background-color: black;
+    color: white;
+    padding: 17px 0;
+    position: relative;
+    z-index: 3;
+}
+
+.header__container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.header__menu {
+}
+
+.menu {
+}
+
+.menu__list {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+
+
+.header__logo {
+    margin-left: 191px;
+    width: 64px;
+    height: 64px;
+    position: relative;
+    z-index: 1;
+}
+
+.header__cart {
+    margin-left: auto;
+    max-width: 132px;
+}
+
+.header__button{
+    cursor: pointer;
+}
+
+.header__button_dropdown .button__icon img:nth-child(2){
+    display: none;
+}
+
+.header__button_dropdown:hover .button__icon img:nth-child(2){
+    display: block;
+}
+
+.header__button_dropdown:hover .button__icon img:nth-child(1){
+    display: none;
+}
+
+.header__button .button__name {
+    padding: 11px 20px;
+    color: #fff;
+}
+
+.header__button .button__icon {
+    padding: 16px;
+}
+
+.header__button .button__icon img {
+    width: 10px;
+    height: 10px;
+}
+
+.header__button:hover .button__name,
+.header__button:hover .button__jumper,
+.header__button:hover .button__icon {
+    background-color: var(--pink-main);
+}
+
+.header__cart .button__name{
+    height: 40px;
+}
+
+.header__cart .button__icon {
+    padding: 11px 10px;
+}
+
+.header__cart .button__icon img {
+    width: 20px;
+    height: 20px;
+}
+
+.header__dropdown-menu__outer{
+    display: none;
+}
+
+.header__dropdown-menu__outer{
+    position: fixed;
+    width: 100vw;
+    left: 0;
+    height: 100vh;
+    
+}
+
+.header__dropdown-menu__outer::after{
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: black;
+    opacity: 0.7;
+    z-index: 1;
+}
+
+.menu__list{
+    height: 100%;
+}
+
+.menu__item{
+    /* height: 100%; */
+}
+
+@media(min-width: 992px){
+    .menu__item .header__dropdown-menu__outer{
+        display: none;
+    }
+    
+    .menu__item:hover  .header__dropdown-menu__outer{
+        display: block;
+    }
+    
+    .header__dropdown-menu__outer::after:hover{
+        display: none;
+    }
+    
+    .header__dropdown-menu__outer:hover{
+        display: none;
+    }
+}
+
+
+
+@media(max-width: 992px){
+    .header__cart{
+        max-width: 42px;
+    }
+}

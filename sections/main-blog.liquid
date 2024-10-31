@@ -1,0 +1,81 @@
+{{ 'main-article.css' | asset_url | stylesheet_tag }}
+{{ 'chronicles.css' | asset_url | stylesheet_tag }}
+{{ 'blog-page.css' | asset_url | stylesheet_tag  }}
+
+<script src="{{ 'blog-page.js' | asset_url }}" defer="defer"></script>
+
+
+<section class="blog-page">
+  <div class="blog-page__container _container">
+    <div class="blog-page__tabs">
+		{% assign count_tags = 0 %}
+		{% for tag in blogs['all'].tags %}
+			{% assign count_tags = count_tags | plus:1 %}
+        {% endfor %}
+      <ul class="tabs" style="grid-template-columns: repeat({{count_tags | plus:1}}, 1fr);">
+        <li class="tab active" data-filter="all">All Topics</li>
+        {% for tag in blogs['all'].tags %}
+          {% assign tag_normalized = tag | downcase | replace: ' ', '-' %}
+          <li class="tab" data-filter="{{ tag_normalized }}">{{ tag }}</li>
+        {% endfor %}
+      </ul>
+    </div>
+
+    <div class="blog-page__content">
+		<div class="chronicles__swiper-outer">
+			<div class="chronicles__swiper swiper">
+			<div class="chronicles__swiper-wrapper swiper-wrapper chronicles__items">
+				{% for article in blogs['all'].articles %}
+				{% assign article_tags = article.tags %}
+					<div class="blog__article  chronicles__swiper-slide swiper-slide  {% for tag in article_tags %}{% assign article_tag_normalized = tag | downcase | replace: ' ', '-' %}{{ article_tag_normalized }} {% endfor %}">
+						{% render 'article-card', article: article, show_reading_time: section.settings.show_reading_time, button_text: section.settings.button_text %}
+					</div>
+				{% endfor %}
+			</div>
+			</div>
+			<div class="chronicles__swiper-button-prev slider-button chronicles__swiper-button">
+				<img src="{{ 'arrow-black.svg' | asset_url }}" alt="">
+				<img src="{{ 'arrow-white.svg' | asset_url }}" alt="">
+			</div>
+			<div class="chronicles__swiper-button-next slider-button chronicles__swiper-button">
+				<img src="{{ 'arrow-black.svg' | asset_url }}" alt="">
+				<img src="{{ 'arrow-white.svg' | asset_url }}" alt="">
+			</div>
+		</div>
+    </div>
+  </div>
+</section>
+
+
+{% schema %}
+{
+  "name": "Blog Page",
+  "settings": [
+    {
+      "type": "blog",
+      "id": "selected_blog",
+      "label": "Select Blog"
+    },
+    {
+      "type": "range",
+      "id": "max_related_articles",
+      "label": "Maximum Related Articles",
+      "default": 3,
+      "min": 1,
+      "max": 10
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button Text",
+      "default": "Read More"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_reading_time",
+      "label": "Show Reading Time",
+      "default": true
+    }
+  ]
+}
+{% endschema %}

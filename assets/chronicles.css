@@ -1,0 +1,226 @@
+.chronicles {
+    padding: 200px 0;
+}
+
+.chronicles__container {
+}
+
+.chronicles__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.chronicles__heading {
+    font-size: 82px;
+    font-family: 'Coolvetica';
+    font-weight: 800;
+    text-transform: uppercase;
+    letter-spacing: -1.1%;
+}
+
+.chronicles__swiper-button.slider-button {
+    transform: translateX(-50%);
+    margin-top: 40px;
+    display: none;
+}
+
+.chronicles__items {
+    margin-top: 60px;
+    display: flex;
+    gap: 8px;
+}
+
+.chronicles__item {
+    position: relative;
+    max-width: 100%;
+    height: 100%;
+    background-color: #fff;
+}
+
+.chronicles__items {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.chronicles__swiper-outer {
+    position: relative;
+    width: 100%;
+}
+
+/* Articles */
+
+.article {
+    display: flex;
+    flex-direction: column;
+}
+
+.article__image {
+    /* display: flex;
+    align-items: center;
+    justify-content: center; */
+    overflow: hidden;
+    height: 100%;
+    max-height: clamp(192px, 18vw, 314px);
+}
+.article__image img {
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    max-height: clamp(192px, 18vw, 314px);
+    object-fit: cover;
+}
+
+.article__title {
+    font-family: 'Coolvetica';
+    font-weight: 400;
+    font-size: clamp(24px, 4vw, 34px);
+    line-height: 110%;
+    text-align: left;
+    color: #000;
+}
+
+.article__text {
+    font-family: 'Forma';
+    font-weight: 500;
+    font-size: clamp(14px, 1vw, 16px);
+    line-height: 130%;
+    letter-spacing: 0.07em;
+    color: #000;
+}
+
+.article__content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+    justify-content: space-between;
+    padding: 20px;
+    height: 100%;
+}
+
+.article__content > div {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    height: 100%;
+}
+
+.article__button {
+    margin-top: 24px;
+}
+
+.article__reading-time {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background: var(--pink-main);
+    padding: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 100%;
+    letter-spacing: 0.07em;
+    color: #fff;
+}
+
+.article__reading-time::before {
+    content: '';
+    display: block;
+    width: 16px;
+    height: 16px;
+    margin-top: -5px;
+    background-image: url('icon-reading.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+@media (max-width: 992px) {
+    .chronicles__swiper-wrapper {
+        display: flex !important;
+        justify-content: flex-start !important; /* Выравнивание слайдов по левому краю */
+        align-items: center;
+        width: 100%; /* Убедитесь, что контейнер занимает всю ширину */
+        /* overflow: hidden;  */
+    }
+
+    .chronicles__swiper-button.slider-button {
+        display: flex;
+    }
+
+    .chronicles__swiper-button-prev {
+        left: calc(50% - 36px);
+    }
+
+    .chronicles__swiper-button-next {
+        left: calc(50% + 36px);
+    }
+
+    .chronicles__swiper-button-next img {
+        transform: rotate(180deg);
+    }
+
+    .chronicles__swiper-button-next img:last-child {
+        transform: rotate(0deg);
+    }
+
+    .chronicles__swiper-button {
+        display: flex;
+    }
+    .chronicles__items {
+        display: none;
+        gap: 0;
+    }
+    .chronicles__swiper {
+        margin-top: 40px;
+    }
+
+    .chronicles__swiper-slide {
+        display: flex;
+        justify-content: center;
+        /* max-width: 343px;
+        width: 100%; */
+    }
+}
+
+@media (max-width: 768px) {
+    .chronicles {
+        padding: 80px 0 180px;
+    }
+    .chronicles__heading {
+        font-size: 60px;
+    }
+
+    .article__content {
+        padding: 16px;
+    }
+
+    .article__content {
+        min-height: 320px;
+    }
+
+    .chronicles__items {
+        margin-top: 0;
+    }
+
+    .article__button .button__name {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .chronicles__heading {
+        font-size: 2.88rem;
+    }
+
+    .article__content {
+        min-height: 280px;
+    }
+
+    /* .chronicles__swiper-slide {
+        max-width: 327px;
+    } */
+}

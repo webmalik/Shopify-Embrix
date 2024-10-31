@@ -1,0 +1,96 @@
+<link rel="stylesheet" href="{{ 'action.css' | asset_url }}" media="print" onload="this.media='all'">
+
+<section class="action">
+	{% if section.settings.product_bg == blank %}
+    	<img src="{{ 'batterfly-pink.svg' | asset_url }}" class="action__batterfly">
+    {% else %}
+		<img src="{{ section.settings.product_bg | img_url: "master" }}" class="action__batterfly">
+	{% endif %}
+	<div class="action__container _container">
+        <img src="{{ section.settings.product_image | img_url: 'master' }}" class="action__product-image">
+        <div class="action__content">
+            <h2 class="action__heading">
+                {{ section.settings.heading }}
+            </h2>
+            <p class="action__text">
+                {{ section.settings.text }}
+            </p>
+            <form action="/cart/add" method="post">
+                <input type="hidden" name="id" value="{{ section.settings.selected_product }}">
+                <button type="submit" class="action__button action__button_cart common-button">
+                    <div class="button__name">
+                        {{ section.settings.add_to_cart_text }}
+                    </div>
+                    <div class="button__icon">
+                        {% render "icon-add" %}
+                    </div>
+                </button>
+            </form>
+            <a href="{{ section.settings.learn_more_link }}" class="action__button action__button_more common-button button_animated">
+                <div class="button__name">
+                    {{ section.settings.learn_more_text }}
+                </div>
+                <div class="button__icon">
+                    <img src="{{ 'button-icon.svg' | asset_url }}" alt="">
+                </div>
+            </a>
+        </div>
+    </div>
+</section>
+
+{% schema %}
+{
+    "name": "Action Section",
+    "settings": [
+        {
+            "type": "image_picker",
+            "id": "product_image",
+            "label": "Product Image"
+        },
+        {
+            "type": "image_picker",
+            "id": "product_bg",
+            "label": "Product background Image"
+        },
+        {
+            "type": "text",
+            "id": "heading",
+            "label": "Heading",
+            "default": "Don't wait"
+        },
+        {
+            "type": "textarea",
+            "id": "text",
+            "label": "Description Text",
+            "default": "— take the step towards a sharper, more balanced you today."
+        },
+        {
+            "type": "product",
+            "id": "selected_product",
+            "label": "Select Product"
+        },
+        {
+            "type": "text",
+            "id": "add_to_cart_text",
+            "label": "Add to Cart Button Text",
+            "default": "Add to cart"
+        },
+        {
+            "type": "text",
+            "id": "learn_more_text",
+            "label": "Learn More Button Text",
+            "default": "Learn more"
+        },
+        {
+            "type": "url",
+            "id": "learn_more_link",
+            "label": "Learn More Link"
+        }
+    ],
+    "presets": [
+        {
+            "name": "Action Section"
+        }
+    ]
+}
+{% endschema %}

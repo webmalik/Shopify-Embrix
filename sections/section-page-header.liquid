@@ -1,0 +1,31 @@
+{{ 'section-main-page.css' | asset_url | stylesheet_tag }}
+
+<div class="page__header">
+	{% if section.settings.header-icon != blank %}
+		<div class="page-header__icon">
+			<img src="{{ section.settings.header-icon | img_url: "master" }}" alt="{{ page.title | escape }}">
+		</div>
+	{% endif %}
+	<h1 class="main-page-title">
+		{{ page.title | escape }}
+	</h1>
+</div>
+
+
+{% schema %}
+{
+    "name": "Page header",
+	"settings": [
+		{
+			"type": "image_picker",
+			"id": "header-icon",
+			"label": "Header Icon"
+		}
+	],
+    "presets": [
+        {
+            "name": "Page header"
+        }
+    ]
+}
+{% endschema %}

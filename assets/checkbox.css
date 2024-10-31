@@ -1,0 +1,36 @@
+.checkbox {
+    margin-top: 8px;
+    background-color: #fff;
+    padding: 16px 20px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    cursor: pointer;
+}
+
+.checkbox__circle {
+    appearance: none;
+    width: 24px;
+    height: 24px;
+    background-color: #fff;
+    border-radius: 50%;
+    border: 2px solid #000;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.checkbox__circle::after {
+    content: '';
+    position: absolute;
+    background-image: url('check-icon.svg');
+    width: 12px;
+    height: 8px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.checkbox__circle:checked::after {
+    opacity: 1;
+}

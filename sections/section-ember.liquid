@@ -1,0 +1,81 @@
+<link rel="stylesheet" href="{{ 'ember.css' | asset_url }}" media="print" onload="this.media='all'">
+
+<script src="{{ 'ember.js' | asset_url }}" defer="defer"></script>
+
+<section class="ember">
+    <div class="_container ember__container">
+        <div class="ember__logo-section">
+			<img src="{{ section.settings.ember_logo | img_url: "master" }}" alt="Emberix Logo" class="ember__logo">
+           <span class="ember__logo-label">
+				{{ section.settings.ember_logo_label }}
+		   </span>
+        </div>
+
+        <div class="ember__features">
+            <div class="ember__feature ember__feature--energy">
+				<span>#1</span>
+                <h3 class="ember__feature-title">{{ section.settings.energy_text }}</h3>
+            </div>
+			<div class="ember__inner">
+            	<div class="ember__description">
+					<div class="ember__fire">
+						<img src="{{ 'fire.svg' | asset_url }}" alt="Fire">
+					</div>
+					<p class="ember__meaning">
+						{{ section.settings.meaning_text }}
+					</p>
+				</div>
+            </div>
+            <div class="ember__feature ember__feature--inspiration">
+				<span>#2</span>
+                <h3 class="ember__feature-title">{{ section.settings.inspiration_text }}</h3>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% schema %}
+{
+    "name": "Ember Section",
+    "settings": [
+        {
+            "type": "header",
+            "content": "Settings Block"
+        },
+        {
+            "type": "image_picker",
+            "id": "ember_logo",
+            "label": "Logo block"
+        },
+		{
+            "type": "text",
+            "id": "ember_logo_label",
+            "label": "Logo label",
+            "default": "what does it mean?"
+        },
+        {
+            "type": "text",
+            "id": "meaning_text",
+            "label": "Meaning Text",
+            "default": "<span>The name \"Emberix\" comes from the word \"ember,\" symbolizing hidden energy and warmth. </span>Combined with the suffix \"-ix,\" which adds a sense of dynamism and innovation, the name reflects the company's mission to ignite new ideas and inspiration. Emberix is the spark that fuels creativity and innovation in the supplement industry"
+        },
+        {
+            "type": "text",
+            "id": "energy_text",
+            "label": "Energy Text",
+            "default": "Energy"
+        },
+        {
+            "type": "text",
+            "id": "inspiration_text",
+            "label": "Inspiration Text",
+            "default": "Inspiration"
+        }
+    ],
+    "presets": [
+        {
+            "name": "Ember Section"
+        }
+    ]
+}
+{% endschema %}

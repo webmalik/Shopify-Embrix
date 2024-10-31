@@ -1,0 +1,67 @@
+<link rel="stylesheet" href="{{ 'details.css' | asset_url }}" media="print" onload="this.media='all'">
+<script src="{{ 'details.js' | asset_url }}" defer="defer"></script>
+
+<section class="details">
+  <div class="details__bg-image">
+    <img src="{{ section.settings.bg_image | img_url: 'master' }}" alt="">
+  </div>
+  <img src="{{ 'cloud.svg' | asset_url }}" alt="" class="details__cloud">
+  <div class="details__container _container">
+    <div class="details__items">
+      {% for block in section.blocks %}
+        {% if block.type == 'details_item' %}
+          <div class="details__item">
+            <div class="details__title">
+              <p>{{ block.settings.title }}</p>
+              <div class="details__toggle">
+                <div class="details__horizontal-bar"></div>
+                <div class="details__vertical-bar"></div>
+              </div>
+            </div>
+            <div class="details__text">
+              {{ block.settings.text }}
+            </div>
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Details Section",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "bg_image",
+      "label": "Background Image"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "details_item",
+      "name": "Details Item",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Overview"
+        },
+        {
+          "type": "textarea",
+          "id": "text",
+          "label": "Text",
+          "default": "Lion's Mane is a brain-boosting mushroom. It helps improve your thinking, clarity, and mood. Packed into a natural, plant-based capsule, this mushroom will keep your mind healthy and active."
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Details Section"
+    }
+  ]
+}
+{% endschema %}

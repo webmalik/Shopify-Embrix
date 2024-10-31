@@ -1,0 +1,84 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-overview",
+      "settings": {
+        "bg_image": "shopify:\/\/shop_images\/bg_f56d39f9-eb6c-497d-bc58-3f01bd4c8f5d.jpg",
+        "text": "Amanita muscaria increases efficiency and creates harmony between the brain and body",
+        "heading": "Amanita muscaria",
+        "mushroom_image": "shopify:\/\/shop_images\/mushroom-2.png"
+      }
+    },
+    "section_mind_RtC7FB": {
+      "type": "section-mind",
+      "settings": {
+        "bg_image_1": "shopify:\/\/shop_images\/167864_2.png",
+        "bg_image_2": "shopify:\/\/shop_images\/167864_3.png",
+        "subheading_icon": "shopify:\/\/shop_images\/subheading-icon.svg",
+        "subheading": "The Mushroom Marvel",
+        "heading_part_1": "for Mind",
+        "heading_part_2": "Body!",
+        "text": "Meet the Amanita muscaria mushroom, a fabulous mushroom with real benefits. Feeling stressed? Amanita muscaria can help you relax by acting as a cozy blanket for your mind. Looking for a creative boost? Amanita muscaria will boost your creativity and bring back inspiration",
+        "button_text": "shop now",
+        "shop_now_link": "shopify:\/\/products\/amanita-muscaria"
+      }
+    },
+    "section_about_overview_488EGW": {
+      "type": "section-about-overview",
+      "settings": {
+        "main_image": "shopify:\/\/shop_images\/Mask_group.png",
+        "bg_svg": "shopify:\/\/shop_images\/Layer_1.svg",
+        "about_heading": "Amanita muscaria: From Ancient Rituals to Modern Benefits",
+        "about_text": "<span>Amanita muscaria, often recognized by its bright red cap with white spots, has a storied history in various cultures around the world. <\/span>\nUsed for centuries by Siberian shamans in their spiritual rituals, this mushroom was believed to aid in communication with the spirit world and enhance mystical experiences. \n <span>Known as the 'fly agaric,' it also found its way into European folklore, often depicted in fairy tales and myths. <\/span> While our ancestors revered it for its mystical properties, modern research has revealed its potential to enhance efficiency, boost creativity, and encourage relaxation"
+      }
+    },
+    "section_science_gKhRe9": {
+      "type": "section-science",
+      "settings": {
+        "bg_image": "shopify:\/\/shop_images\/view-mushrooms-nature_2.png",
+        "bg_image_mobile": "shopify:\/\/shop_images\/view-mushrooms-nature_2_41f59705-4cea-4756-a8b5-84f80425f7bc.png",
+        "heading_highlight": "Science-Backed",
+        "heading": "Benefits of Amanita muscaria Mushroom",
+        "text": "Research suggests that Amanita muscaria holds a range of promising benefits, particularly in cell protection and neuroprotection. It shows potential in areas such as cardiovascular protection, liver health, managing inflammation, and reducing oxidative stress.",
+        "studies_link": "https:\/\/www.ncbi.nlm.nih.gov\/pmc\/articles\/PMC10130647\/",
+        "studies_icon": "shopify:\/\/shop_images\/studies-icon.svg",
+        "studies_text": "Studies",
+        "studies_reference": "Wagner A, Pehar M, Yan Z, Kulka M. Amanita muscaria extract potentiates production of proinflammatory cytokines by dsRNA-activated human microglia. Front Pharmacol. 2023 Apr 12;14:1102465. doi: 10.3389\/fphar.2023.1102465. PMID: 37124206; PMCID: PMC10130647."
+      }
+    },
+    "section_blog_slider_a7MHB8": {
+      "type": "section-blog-slider",
+      "settings": {
+        "show_header_Blog": true,
+        "heading": "Mushroom Chronicles",
+        "all_articles_link": "shopify:\/\/blogs\/all",
+        "all_articles_text": "All Articles",
+        "selected_blog": "all",
+        "max_articles": 3,
+        "button_text": "Read",
+        "show_reading_time": false
+      }
+    },
+    "section_action_U3kpqy": {
+      "type": "section-action",
+      "settings": {
+        "product_image": "shopify:\/\/shop_images\/Group_196.png",
+        "product_bg": "shopify:\/\/shop_images\/smile_868a19e5-caae-48c0-9055-0d2dbf010d29.svg",
+        "heading": "Don't wait",
+        "text": "— take the step towards a sharper, more balanced you today.",
+        "selected_product": "amanita-muscaria",
+        "add_to_cart_text": "Add to cart",
+        "learn_more_text": "Learn more",
+        "learn_more_link": "shopify:\/\/products\/amanita-muscaria"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "section_mind_RtC7FB",
+    "section_about_overview_488EGW",
+    "section_science_gKhRe9",
+    "section_blog_slider_a7MHB8",
+    "section_action_U3kpqy"
+  ]
+}

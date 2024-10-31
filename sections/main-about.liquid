@@ -1,0 +1,69 @@
+{{ 'main-about.css' | asset_url | stylesheet_tag }}
+
+<section class="about">
+	<div class="about__wrapper">
+		<div class="about__images">
+			<div class="about__image-desctop">
+				<img src="{{ section.settings.about_image_desctop | img_url: 'master' }}" alt="{{ page.title | escape }}">
+			</div>
+			<div class="about__image-mobile">
+				<img src="{{ section.settings.about_image_mobile | img_url: 'master' }}" alt="{{ page.title | escape }}">
+			</div>
+		</div>
+		<div class="about__content">
+			<div class="about__container _container">
+				<div class="about__inner">
+					<div class="about__subtitle">
+						{{ section.settings.about_subtitle | escape }}
+					</div>
+					<div class="about__text">
+						{{ section.settings.about_text | escape }}
+					</div>
+				</div>
+				<div class="about__title">
+					{{ page.title | escape }}
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+{% schema %}
+{
+  "name": "Banner About Us",
+  "tag": "section",
+  "class": "section",
+  "settings": [
+    {
+		"type": "header",
+		"content": "Content for Banner"
+    },
+	{
+		"type": "text",
+		"id": "about_subtitle",
+		"label":"Subtitle page",
+		"default":"We’re inspired by the resilience and versatility of mushrooms."
+	},
+	{
+		"type": "text",
+		"id": "about_text",
+		"label":"Text in page",
+		"default":"These little guys can thrive in the wildest of places, kind of like your favorite uncle who somehow survives on camping trips with just a pocketknife and a can of beans. Mushrooms have been used for centuries in various cultures for their health benefits, and we’re here to continue that tradition with a modern twist."
+	},
+	{
+		"type": "header",
+		"content": "Images for Banner"
+    },
+	{
+		"type": "image_picker",
+		"id": "about_image_desctop",
+		"label":"Image Desctop"
+	},
+	{
+		"type": "image_picker",
+		"id": "about_image_mobile",
+		"label":"Image Mobile"
+	}
+  ] 
+}
+{% endschema %}

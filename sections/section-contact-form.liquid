@@ -1,0 +1,100 @@
+<link rel="stylesheet" href="{{ 'contact-form.css' | asset_url }}" media="print" onload="this.media='all'">
+<script src="{{ 'contact-form.js' | asset_url }}" defer="defer"></script>
+
+<div class="contact-form{% if template.suffix == 'contact' %} contact-form--contacts{% endif %}">
+    <div class="contact-form__container _container">
+        <div class="contact-form__image">
+            <img src="{{ 'contacts-bg.svg' | asset_url }}" class="contact-form__bg">
+        </div>
+        <div class="contact-form__wrapper">
+            <div class="contact-form__content">
+                <h2 class="contact-form__heading">
+                    {{ section.settings.heading }} <br>
+                    <span>{{ section.settings.subheading }}</span>
+                </h2>
+                <p class="contact-form__text">
+                    {{ section.settings.text }}
+                </p>
+            </div>
+            {%- form 'contact', id: 'ContactForm', class: 'contact-form__form' -%}
+                <input type="text" autocomplete="name" id="ContactForm-name" name="contact[{{ 'templates.contact.form.name' | t }}]" placeholder="{{ section.settings.placeholder_name }}" class="contact-form__input">
+                <input type="email" autocomplete="email" id="ContactForm-email" name="contact[email]" placeholder="{{ section.settings.placeholder_email }}" class="contact-form__input">
+                <input type="tel" id="ContactForm-phone" class="contact-form__input" autocomplete="tel" name="contact[{{ 'templates.contact.form.phone' | t }}]" value="{% if form.phone %}{{ form.phone }}{% elsif customer %}{{ customer.phone }}{% endif %}" placeholder="{{ section.settings.placeholder_phone }}">
+				<button type="submit" class="contact-form__button common-button button_animated">
+                    <div class="button__name">
+                        {{ section.settings.button_text }}
+                    </div>
+                    <div class="button__icon">
+                        <img src="{{ 'button-icon.svg' | asset_url }}" alt="">
+                    </div>
+                </button>
+            {%- endform -%}
+            <div class="contact-form__error-message" style="display: none;"></div>
+        </div>
+    </div>
+</div>
+
+{% schema %}
+{
+    "name": "Contact Form Section",
+    "settings": [
+        {
+            "type": "image_picker",
+            "id": "bg_image",
+            "label": "Background Image"
+        },
+        {
+            "type": "text",
+            "id": "heading",
+            "label": "Heading",
+            "default": "Got Questions?"
+        },
+        {
+            "type": "text",
+            "id": "subheading",
+            "label": "Subheading",
+            "default": "We’ve Got Answers!"
+        },
+        {
+            "type": "textarea",
+            "id": "text",
+            "label": "Description",
+            "default": "Feel free to reach out to us. We're here to help and ensure you get the answers you need."
+        },
+        {
+            "type": "text",
+            "id": "placeholder_name",
+            "label": "Name Placeholder",
+            "default": "Name"
+        },
+        {
+            "type": "text",
+            "id": "placeholder_email",
+            "label": "Email Placeholder",
+            "default": "E-mail"
+        },
+        {
+            "type": "text",
+            "id": "placeholder_phone",
+            "label": "Phone Placeholder",
+            "default": "Phone Number"
+        },
+        {
+            "type": "text",
+            "id": "button_text",
+            "label": "Button Text",
+            "default": "send"
+        },
+        {
+            "type": "image_picker",
+            "id": "button_icon",
+            "label": "Button Icon"
+        }
+    ],
+    "presets": [
+        {
+            "name": "Contact Form Section"
+        }
+    ]
+}
+{% endschema %}

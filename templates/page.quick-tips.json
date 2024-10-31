@@ -1,0 +1,133 @@
+{
+  "sections": {
+    "section_page_header_aYEm79": {
+      "type": "section-page-header",
+      "settings": {
+        "header-icon": "shopify:\/\/shop_images\/fi_3064846.svg"
+      }
+    },
+    "main": {
+      "type": "main-quick-tips",
+      "blocks": {
+        "card_block_XGEW3H": {
+          "type": "card_block",
+          "settings": {
+            "product_name": "Lion's Mane",
+            "product_description": "Lion's Mane is the top choice for boosting brain function and neuroprotection.",
+            "image": "shopify:\/\/shop_images\/1.png",
+            "link": "shopify:\/\/products\/lion-s-mane",
+            "button_text": "SHOP NOW",
+            "order": "1"
+          }
+        },
+        "list_item_block_iVWpiJ": {
+          "type": "list_item_block",
+          "settings": {
+            "tip_text": "Lion's Mane is the top choice for boosting brain function and neuroprotection",
+            "order": "1"
+          }
+        },
+        "list_item_block_xPBcrX": {
+          "type": "list_item_block",
+          "settings": {
+            "tip_text": "Take Lion's Mane capsules daily.",
+            "order": "1"
+          }
+        },
+        "list_item_block_dH7Y4A": {
+          "type": "list_item_block",
+          "settings": {
+            "tip_text": "Drink plenty of water when consuming mushroom supplements",
+            "order": "1"
+          }
+        },
+        "list_item_block_m34jTk": {
+          "type": "list_item_block",
+          "settings": {
+            "tip_text": "Keep a journal to track the benefits you experience from using mushrooms",
+            "order": "1"
+          }
+        },
+        "card_block_kinpqH": {
+          "type": "card_block",
+          "settings": {
+            "product_name": "Amanita muscaria",
+            "product_description": "Amanita muscaria increases efficiency and creates harmony between the brain and body",
+            "image": "shopify:\/\/shop_images\/2.png",
+            "link": "shopify:\/\/products\/amanita-muscaria",
+            "button_text": "SHOP NOW",
+            "order": "2"
+          }
+        },
+        "list_item_block_eG8FLq": {
+          "type": "list_item_block",
+          "settings": {
+            "tip_text": "Keep mushrooms fresh by storing them in a cool, dry place",
+            "order": "2"
+          }
+        },
+        "list_item_block_wccgyk": {
+          "type": "list_item_block",
+          "settings": {
+            "tip_text": "Add Amanita Muscaria powder to smoothies",
+            "order": "2"
+          }
+        },
+        "list_item_block_wQQQMg": {
+          "type": "list_item_block",
+          "settings": {
+            "tip_text": "Begin with a small dose of Amanita Muscaria",
+            "order": "2"
+          }
+        },
+        "list_item_block_kakzNH": {
+          "type": "list_item_block",
+          "settings": {
+            "tip_text": "Drink plenty of water when consuming mushroom supplements",
+            "order": "2"
+          }
+        },
+        "list_item_block_UJKMq7": {
+          "type": "list_item_block",
+          "settings": {
+            "tip_text": "Don’t cook Amanita Muscaria powder at high temperatures",
+            "order": "2"
+          }
+        }
+      },
+      "block_order": [
+        "card_block_XGEW3H",
+        "list_item_block_iVWpiJ",
+        "list_item_block_xPBcrX",
+        "list_item_block_dH7Y4A",
+        "list_item_block_m34jTk",
+        "card_block_kinpqH",
+        "list_item_block_eG8FLq",
+        "list_item_block_wccgyk",
+        "list_item_block_wQQQMg",
+        "list_item_block_kakzNH",
+        "list_item_block_UJKMq7"
+      ],
+      "settings": {
+        "header-icon": "shopify:\/\/shop_images\/fi_3064846.svg"
+      }
+    },
+    "section_contact_form_wKM8Ai": {
+      "type": "section-contact-form",
+      "settings": {
+        "heading": "Got Questions?",
+        "subheading": "We’ve Got Answers!",
+        "text": "Feel free to reach out to us. We're here to help and ensure you get the answers you need.",
+        "placeholder_name": "Name",
+        "placeholder_email": "E-mail",
+        "placeholder_phone": "Phone Number",
+        "button_text": "send"
+      }
+    }
+  },
+  "order": [
+    "section_page_header_aYEm79",
+    "main",
+    "section_contact_form_wKM8Ai"
+  ]
+}

@@ -1,0 +1,12 @@
+.not-found-page {
+    background: black;
+    height: calc(100vh - 98px);
+}
+
+.not-found-page__heading {
+    font-size: 'Coolvetica';
+    font-size: 307.42px;
+    letter-spacing: -3.38px;
+    line-height: 0.8;
+    font-weight: 800;
+}

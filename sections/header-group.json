@@ -1,0 +1,22 @@
+{
+  "name": "t:sections.header.name",
+  "type": "header",
+  "sections": {
+    "header": {
+      "type": "header",
+      "settings": {
+        "menu": "main-menu",
+        "header_logo": "shopify:\/\/shop_images\/logo.svg",
+        "card_text": "Cart",
+        "mobile_text-1": "Feeling worn out?",
+        "mobile_text-2": "Let's change that!",
+        "shop_all": "shopify:\/\/shop_images\/dropdown-menu-1.png",
+        "shop_lions": "shopify:\/\/shop_images\/dropdown-menu-2.png",
+        "shop_amanita": "shopify:\/\/shop_images\/dropdown-menu-3.png"
+      }
+    }
+  },
+  "order": [
+    "header"
+  ]
+}

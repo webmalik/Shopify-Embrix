@@ -1,0 +1,52 @@
+<link rel="stylesheet" href="{{ 'about-mushroom.css' | asset_url }}" media="print" onload="this.media='all'">
+
+<section class="about-mushroom">
+    <div class="about-mushroom__black-bg"></div>
+    <div class="about-mushroom__container _container">
+        <img src="{{ section.settings.main_image | img_url: 'master' }}" alt="" class="about-mushroom__main-image">
+        <div class="about-mushroom__content">
+            <img src="{{ section.settings.bg_svg | img_url: 'small' }}" alt="" class="about-mushroom__bg">
+            <h2 class="about-mushroom__heading">
+                {{ section.settings.about_heading }}
+            </h2>
+            <p class="about-mushroom__text">
+                {{ section.settings.about_text }}
+            </p>
+        </div>
+    </div>
+</section>
+
+{% schema %}
+{
+    "name": "About Overview Section",
+    "settings": [
+        {
+            "type": "image_picker",
+            "id": "main_image",
+            "label": "Main Image"
+        },
+        {
+            "type": "image_picker",
+            "id": "bg_svg",
+            "label": "Background SVG"
+        },
+        {
+            "type": "text",
+            "id": "about_heading",
+            "label": "About Mushroom Heading",
+            "default": "Lion’s Mane: The Fuzzy Brain Booster"
+        },
+        {
+            "type": "textarea",
+            "id": "about_text",
+            "label": "About Mushroom Text",
+            "default": "Lion's Mane mushroom has been a staple of Chinese and Japanese medicine for centuries, celebrated for its ability to sharpen mental clarity and improve concentration.\n\nKnown as 'Hou Tou Gu' in China and 'Yamabushitake' in Japan, it was particularly favored for enhancing meditation practice.\n\nWhile our ancestors could only guess at the mushroom's benefits, modern science is now confirming its neuroprotective and cognitive effects, cementing its reputation as a powerful health enhancer."
+        }
+    ],
+    "presets": [
+        {
+            "name": "About Overview Section"
+        }
+    ]
+}
+{% endschema %}

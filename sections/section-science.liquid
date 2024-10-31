@@ -1,0 +1,88 @@
+<link rel="stylesheet" href="{{ 'science.css' | asset_url }}" media="print" onload="this.media='all'">
+
+<section class="science">
+    <div class="science__bg">
+        <picture>
+            <source srcset="{{ section.settings.bg_image | img_url: 'master' }}" media="(min-width: 768px)">
+            <img src="{{ section.settings.bg_image_mobile | img_url: 'master' }}">
+        </picture>
+    </div>
+    <div class="science__container _container">
+        <h2 class="science__heading">
+            <span>{{ section.settings.heading_highlight }}</span> {{ section.settings.heading }}
+        </h2>
+        <p class="science__text">
+            {{ section.settings.text }}
+        </p>
+        <a href="{{ section.settings.studies_link }}" class="science__studies">
+            <img src="{{ 'studies-icon.svg' | asset_url }}" alt="">
+            <span>{{ section.settings.studies_text }}</span>
+        </a>
+        <p class="science__studies-text">
+            {{ section.settings.studies_reference }}
+        </p>
+    </div>
+</section>
+
+{% schema %}
+{
+    "name": "Science Section",
+    "settings": [
+        {
+            "type": "image_picker",
+            "id": "bg_image",
+            "label": "Background Image (Desktop)"
+        },
+        {
+            "type": "image_picker",
+            "id": "bg_image_mobile",
+            "label": "Background Image (Mobile)"
+        },
+        {
+            "type": "text",
+            "id": "heading_highlight",
+            "label": "Heading Highlight Text",
+            "default": "Science-Backed"
+        },
+        {
+            "type": "text",
+            "id": "heading",
+            "label": "Heading",
+            "default": "Benefits of Lion's Mane Mushroom"
+        },
+        {
+            "type": "textarea",
+            "id": "text",
+            "label": "Description Text",
+            "default": "Lion’s Mane mushroom has shown promising effects in enhancing cognitive functions. Research indicates that consuming Lion’s Mane can improve working memory, complex attention, and reaction time within just 2 hours. It also appears to boost feelings of happiness during the same period."
+        },
+        {
+            "type": "url",
+            "id": "studies_link",
+            "label": "Studies Link"
+        },
+        {
+            "type": "image_picker",
+            "id": "studies_icon",
+            "label": "Studies Icon"
+        },
+        {
+            "type": "text",
+            "id": "studies_text",
+            "label": "Studies Button Text",
+            "default": "Studies"
+        },
+        {
+            "type": "textarea",
+            "id": "studies_reference",
+            "label": "Studies Reference Text",
+            "default": "Docherty S, Doughty FL, Smith EF. The Acute and Chronic Effects of Lion's Mane Mushroom Supplementation on Cognitive Function, Stress and Mood in Young Adults: A Double-Blind, Parallel Groups, Pilot Study. Nutrients. 2023 Nov 20;15(22):4842. doi: 10.3390/nu15224842. PMID: 38004235; PMCID: PMC10675414."
+        }
+    ],
+    "presets": [
+        {
+            "name": "Science Section"
+        }
+    ]
+}
+{% endschema %}

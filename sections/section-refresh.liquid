@@ -1,0 +1,68 @@
+<link rel="stylesheet" href="{{ 'refresh.css' | asset_url }}" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="{{ 'refresh-mobile.css' | asset_url }}" media="print" onload="this.media='all'">
+
+<section class="refresh">
+  <div class="refresh__bg">
+    <img src="{{ 'bg.jpg' | asset_url }}" alt="">
+  </div>
+  <div class="refresh__cloud abs">
+    <img src="{{ 'cloud.png' | asset_url }}" alt="">
+  </div>
+  <div class="refresh__flower abs">
+    <img src="{{ 'flower.svg' | asset_url }}" alt="">
+  </div>
+  <div class="refresh__smile abs">
+    <img src="{{ 'refresh-smile.svg' | asset_url }}" alt="">
+  </div>
+  <div class="refresh__batterfly refresh__batterfly-1 abs">
+    <img src="{{ 'butterfly.svg' | asset_url }}" alt="">
+  </div>
+  <div class="refresh__batterfly refresh__batterfly-2 abs">
+    <img src="{{ 'butterfly.svg' | asset_url }}" alt="">
+  </div>
+  <p class="refresh__emberix">
+    &copy;&nbsp;{{ shop.name }}
+  </p>
+  <div class="refresh__container _container">
+    <p class="refresh__subtext">
+      {{ section.settings.subtext }}
+    </p>
+    <h3 class="refresh__subheading">
+      {{ section.settings.subheading }}
+    </h3>
+    <h2 class="refresh__heading">
+      {{ section.settings.heading }}
+    </h2>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Refresh Section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "subtext",
+      "label": "Subtext",
+      "default": "It’s your time to"
+    },
+    {
+      "type": "text",
+      "id": "subheading",
+      "label": "Subheading",
+      "default": "recharge your body"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "refresh your mind"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Refresh Section"
+    }
+  ]
+}
+{% endschema %}

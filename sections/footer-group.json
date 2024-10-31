@@ -1,0 +1,43 @@
+{
+  "name": "t:sections.footer.name",
+  "type": "footer",
+  "sections": {
+    "footer": {
+      "type": "footer",
+      "blocks": {
+        "link_list_H7Xm9T": {
+          "type": "link_list",
+          "settings": {
+            "menu": "footer"
+          }
+        },
+        "link_list_xNYLRy": {
+          "type": "link_list",
+          "settings": {
+            "menu": "footer-menu-2"
+          }
+        },
+        "link_list_jHNFj6": {
+          "type": "link_list",
+          "settings": {
+            "menu": "footer-menu-3"
+          }
+        }
+      },
+      "block_order": [
+        "link_list_H7Xm9T",
+        "link_list_xNYLRy",
+        "link_list_jHNFj6"
+      ],
+      "settings": {
+        "footer_logo": "shopify:\/\/shop_images\/logo_991f6297-3884-4f22-867d-034610dc866c.svg",
+        "show_policy": true,
+        "text-1": "Feeling worn out?",
+        "text-2": "Let's change that!"
+      }
+    }
+  },
+  "order": [
+    "footer"
+  ]
+}

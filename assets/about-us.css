@@ -1,0 +1,107 @@
+.about-us {
+    padding: 200px 0;
+}
+
+.about-us__container {
+}
+
+.about-us__subtext {
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 0.32px;
+}
+
+.about-us__heading {
+    text-align: start;
+    margin-top: 43px;
+    font-family: var(--second-family);
+    font-weight: 400;
+    font-size: 82px;
+    line-height: 100%;
+    letter-spacing: -0.01em;
+    color: #000;
+    max-width: 889px;
+}
+
+.about-us__heading span {
+    color: var(--pink-main);
+}
+
+.about-us__footer {
+    display: flex;
+    justify-content: flex-end;
+    gap: 9.27rem;
+    margin-top: 93px;
+}
+
+.about-us__image {
+    flex: 33.2% 1 0;
+    width: 100%;
+    max-width: 539px;
+}
+
+.about-us__image img {
+    max-width: 100%;
+}
+
+.about-us__content {
+    flex: 38.2% 1 0;
+    max-width: 620px;
+}
+
+.about-us__text {
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 1.242px;
+}
+
+.about-us__button {
+    margin-top: 40px;
+}
+
+@media (max-width: 1024px) {
+    .about-us__heading {
+        font-size: 70px;
+    }
+}
+
+@media (max-width: 768px) {
+    .about-us {
+        padding: 100px 0;
+    }
+    .about-us__heading {
+        font-size: 50px;
+    }
+    .about-us__footer {
+        flex-direction: column;
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .about-us {
+        padding: 80px 0;
+    }
+    .about-us__subtext {
+        font-size: 14px;
+    }
+    .about-us__heading {
+        margin-top: 24px;
+        font-size: 42px;
+    }
+    .about-us__footer {
+        margin-top: 24px;
+        gap: 0;
+    }
+    .about-us__image {
+        max-width: 296px;
+        margin-left: auto;
+    }
+    .about-us__text {
+        font-size: 14px;
+        margin-top: 40px;
+    }
+    .about-us__button {
+        margin-top: 24px;
+    }
+}

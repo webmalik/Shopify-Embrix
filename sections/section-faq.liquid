@@ -1,0 +1,64 @@
+<link rel="stylesheet" href="{{ 'faq.css' | asset_url }}" media="print" onload="this.media='all'">
+<script src="{{ 'faq.js' | asset_url }}" defer="defer"></script>
+
+<section class="faq">
+  <div class="faq__container _container">
+    <img src="{{ section.settings.heading_image | img_url: 'master' }}" alt="" class="faq__heading">
+    <div class="faq__items">
+      {% for block in section.blocks %}
+        {% if block.type == 'faq_item' %}
+          <div class="faq__item">
+            <span class="faq__number">
+              {{ forloop.index }}
+            </span>
+            <div class="faq__content">
+              <p class="faq__question">{{ block.settings.question }}</p>
+              <p class="faq__answer">{{ block.settings.answer }}</p>
+            </div>
+            <div class="faq__toggle">
+              {%  render "faq-toggle" %}
+            </div>
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "FAQ Section",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "heading_image",
+      "label": "Heading Image"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "faq_item",
+      "name": "FAQ Item",
+      "settings": [
+        {
+          "type": "text",
+          "id": "question",
+          "label": "Question",
+          "default": "Are your products safe?"
+        },
+        {
+          "type": "textarea",
+          "id": "answer",
+          "label": "Answer",
+          "default": "The recommended dosage is on the package. Usually, you take them once or twice a day with meals. But for the best results, just follow the instructions on the label. Easy peasy!"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "FAQ Section"
+    }
+  ]
+}
+{% endschema %}

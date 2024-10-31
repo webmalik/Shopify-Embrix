@@ -1,0 +1,277 @@
+button {
+    background-color: transparent;
+    cursor: pointer;
+}
+
+.button {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 324px;
+    justify-content: center;
+}
+
+.button__name {
+    padding: 30.5px 0;
+    max-width: 240px;
+    width: 100%;
+    font-family: 'Forma';
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 16px;
+    /* font-size: 1rem; */
+    letter-spacing: 1.104px;
+    text-wrap: nowrap;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button__jumper {
+    width: 4px;
+    height: 22px;
+}
+
+.button__icon {
+    padding: 28px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button__icon img {
+    width: 24px;
+    height: 24px;
+}
+
+.button__name,
+.button__jumper,
+.button__icon {
+    background-color: black;
+    transition: all 0.3s ease;
+}
+
+.button_animated {
+}
+
+.button_animated {
+    color: white;
+}
+
+.button_animated .button__icon {
+    padding: 14px;
+}
+
+.button_animated .button__icon img {
+    width: 52px;
+    height: 52px;
+}
+
+.button_animated:hover .button__icon img {
+    animation: rotateIcon 0.5s ease-in-out 1 forwards;
+}
+
+.button_animated:not(:hover) .button__icon img {
+    animation: rotateBack 0.2s ease-in-out 1 forwards;
+}
+
+.button_white {
+    color: black;
+}
+.button_white:hover {
+    color: white;
+}
+
+.button_black {
+    color: white;
+}
+
+.button_purple {
+    color: white;
+}
+
+.button_purple:hover {
+    color: black;
+}
+
+.button:hover .button__name,
+.button:hover .button__jumper,
+.button:hover .button__icon {
+    background-color: var(--pink-main);
+}
+
+.button_purple .button__name,
+.button_purple .button__jumper,
+.button_purple .button__icon {
+    background-color: var(--pink-main);
+}
+
+.button_purple:hover .button__name,
+.button_purple:hover .button__jumper,
+.button_purple:hover .button__icon {
+    background-color: white;
+}
+
+.button_white .button__name,
+.button_white .button__jumper,
+.button_white .button__icon {
+    background-color: white;
+}
+
+.button_white:hover .button__name,
+.button_white:hover .button__jumper,
+.button_white:hover .button__icon {
+    background-color: var(--pink-main);
+}
+
+.button_animated:hover .button__icon {
+    background-color: black;
+}
+
+.button_animated.button_white .button__name,
+.button_animated.button_white .button__jumper,
+.button_animated.button_white .button__icon {
+    background-color: white;
+}
+
+.button_animated.button_white:hover .button__name,
+.button_animated.button_white:hover .button__jumper {
+    background-color: var(--pink-main);
+}
+
+@keyframes rotateIcon {
+    0% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(40deg);
+    }
+    50% {
+        transform: rotate(10deg);
+    }
+    75% {
+        transform: rotate(20deg);
+    }
+    100% {
+        transform: rotate(15deg);
+    }
+}
+
+@keyframes rotateBack {
+    from {
+        transform: rotate(15deg);
+    }
+    to {
+        transform: rotate(0deg);
+    }
+}
+
+/* Articles Button*/
+
+.button_articles {
+    color: white;
+    height: 80px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    overflow: hidden;
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: uppercase;
+    gap: 0px;
+    max-width: 80px;
+    transition: max-width 0.5s ease, gap 0.5s ease;
+}
+
+.button_articles__icon {
+    padding: 32px;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button_articles__icon:hover {
+    background-color: var(--pink-main);
+}
+
+.button_articles:hover {
+    max-width: 500px;
+    gap: 100px;
+}
+
+.button_articles span {
+    overflow: hidden;
+    max-width: 0%;
+    text-wrap: nowrap;
+    margin-left: 40px;
+    transition: max-width 0.5s ease-in 0.3s;
+}
+
+.button_articles:hover {
+    background-color: var(--pink-main);
+    transition: max-width 0.5s ease-in-out;
+}
+
+.button_articles:hover span {
+    transition: max-width 0.5s ease-in-out;
+    max-width: 100%;
+}
+
+@media (max-width: 768px) {
+    .button__name {
+        font-size: 14px;
+        padding: 23.5px 0;
+    }
+    .button__icon {
+        padding: 23px;
+    }
+
+    .button__icon img {
+        width: 18px;
+        height: 18px;
+    }
+    .button_animated .button__icon {
+        padding: 11px;
+    }
+
+    .button_animated .button__icon img {
+        width: 42px;
+        height: 42px;
+    }
+    .button_articles {
+        height: 60px;
+        gap: 30px;
+    }
+    .button_articles__icon {
+        color: white;
+        height: 60px;
+        max-width: 60px;
+    }
+    .button_articles:hover {
+        animation: articlesButtonOpen 0.5s linear 1 forwards,
+            articlesButtonGapOpenMobile 0.25s ease-in 1 forwards;
+    }
+}
+
+@media (max-width: 630px) {
+    .button_articles:hover,
+    .button_articles,
+    .button_articles span .button_articles:hover span {
+        animation: none;
+    }
+    .button_articles span {
+        display: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .button_articles {
+        height: 44px;
+    }
+    .button_articles__icon {
+        height: 44px;
+        width: 44px;
+        padding: 0;
+    }
+}

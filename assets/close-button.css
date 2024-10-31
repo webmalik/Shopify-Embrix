@@ -1,0 +1,38 @@
+.close-button{
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+
+.close-button:hover{
+    background-color: var(--pink-main);
+}
+
+
+.close-button svg{
+    width: 25% ;
+    height: 25% ;
+}
+
+.close-button svg rect{
+    fill: black;
+    transition: fill 0.3s ease;
+}
+
+.close-button:hover svg rect{
+    fill: white;
+}
+
+.close-button_black:hover{
+    background-color: black;
+}
+
+.close-button_black:hover svg rect{
+    fill: white;
+}
+
+@media(max-width: 480px){
+    
+}

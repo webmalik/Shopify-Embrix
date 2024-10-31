@@ -1,0 +1,44 @@
+{
+  "sections": {
+    "product-grid": {
+      "type": "main-collection-product-grid",
+      "blocks": {
+        "mushroom_block_rzQP7b": {
+          "type": "mushroom_block",
+          "settings": {
+            "background_image": "shopify:\/\/shop_images\/mmbg-1.svg",
+            "product_image": "shopify:\/\/shop_images\/mushroom-1.png",
+            "selected_product": "lion-s-mane",
+            "product_title": "Lion’s mane",
+            "product_description": "Lion's Mane is the top choice for boosting brain function and neuroprotection"
+          }
+        },
+        "mushroom_block_hrzVKC": {
+          "type": "mushroom_block",
+          "settings": {
+            "background_image": "shopify:\/\/shop_images\/mmbg-2.png",
+            "product_image": "shopify:\/\/shop_images\/mushroom-2.png",
+            "selected_product": "amanita-muscaria",
+            "product_title": "Amanita muscaria",
+            "product_description": "Amanita muscaria increases efficiency and creates harmony between the brain and body"
+          }
+        }
+      },
+      "block_order": [
+        "mushroom_block_rzQP7b",
+        "mushroom_block_hrzVKC"
+      ],
+      "settings": {
+        "show_header": true,
+        "heading": "Mushroom Menu",
+        "selected_collection": "",
+        "max_products": 5,
+        "add_to_cart_text": "Add to Cart",
+        "shop_now_text": "Learn more"
+      }
+    }
+  },
+  "order": [
+    "product-grid"
+  ]
+}

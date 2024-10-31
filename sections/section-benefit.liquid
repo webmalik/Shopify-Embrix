@@ -1,0 +1,88 @@
+<link rel="stylesheet" href="{{ 'benefits.css' | asset_url }}" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="{{ 'benefits-mobile.css' | asset_url }}" media="print" onload="this.media='all'">
+<script src="{{ 'benefits-swiper.js' | asset_url }}" defer="defer"></script>
+<section class="benefits">
+  <div class="benefits__container _container">
+    
+    <h2 class="benefits__heading {% if section.settings.show_header == false %} benefits__heading--hidden {% endif %}">
+      <img src="{{ 'heading-mushroom.svg' | asset_url }}" alt="">
+    </h2>
+    <p class="benefits__subheading {% if section.settings.show_header == false %} benefits__heading--hidden {% endif %} {{ template.name }}">{{ section.settings.subheading }}</p>
+    
+    <div class="benefits__slider swiper">
+      <div class="benefits__items swiper-wrapper">
+        {% for block in section.blocks %}
+          {% if block.type == 'benefits_item' %}
+            <div class="benefits__item swiper-slide">
+              <p class="benefits__effect">
+                {{ block.settings.effect }}
+              </p>
+              <div class="benefits__image" style="mask-image:url({{ block.settings.image | img_url: 'master' }});">
+                <img src="{{ block.settings.image_bg | img_url: 'master' }}" alt="">
+              </div>
+              <p class="benefits__description">
+                {{ block.settings.description }}
+              </p>
+            </div>
+          {% endif %}
+        {% endfor %}
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Benefits Section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "subheading",
+      "label": "Subheading",
+      "default": "from shrooms"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_header",
+      "label": "Show Header",
+      "default": true
+    }
+  ],
+  "blocks": [
+    {
+      "type": "benefits_item",
+      "name": "Benefits Item",
+      "settings": [
+        {
+          "type": "text",
+          "id": "effect",
+          "label": "Effect",
+          "default": "Boosted Energy"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image Mask"
+        },
+        {
+          "type": "image_picker",
+          "id": "image_bg",
+          "label": "Image Full"
+        },
+        {
+          "type": "text",
+          "id": "description",
+          "label": "Description",
+          "default": "Relaxed nervous system and quality sleep"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Benefits Section"
+    }
+  ]
+}
+{% endschema %}

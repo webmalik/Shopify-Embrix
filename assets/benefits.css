@@ -1,0 +1,112 @@
+.benefits {
+    padding: 0 0 200px;
+}
+
+.benefits__container {
+}
+
+.benefits__heading {
+    margin-top: 0;
+}
+
+.benefits__heading--hidden {
+    display: none;
+}
+
+.benefits__heading img {
+    position: relative;
+    /* right: 19.17rem;
+    bottom: 3.47rem; */
+    width: 100%;
+}
+
+.benefits__subheading {
+    font-size: 64px;
+    letter-spacing: -0.704px;
+    font-family: 'Coolvetica';
+    padding: 7.78px 38.88px;
+    color: white;
+    background-color: var(--pink-main);
+    width: fit-content;
+    margin-top: -3%;
+}
+
+.benefits__items {
+    display: flex;
+    justify-content: space-between;
+    /* align-items: stretch; */
+    gap: 10px;
+    margin-top: 80px;
+}
+
+.benefits__item {
+    width: 100%;
+    background-color: white;
+    padding: 42px 42px 61px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 100%;
+    align-self: stretch;
+    min-height: clamp(470px, 40vw, 700px);
+    position: relative;
+}
+
+.benefits__effect {
+    position: relative;
+    text-align: center;
+    color: #373737;
+    font-size: 18px;
+    letter-spacing: 0.36px;
+    font-weight: 500;
+    transition: all 0.5s ease-in-out;
+    z-index: 2;
+}
+
+.benefits__image {
+    /* margin: 41px 0 38px; */
+    /* padding-top: 100%; */
+    width: 100%;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+    mask-repeat: no-repeat;
+    -webkit-mask-repeat: no-repeat;
+    mask-position: center 40%;
+    -webkit-mask-position: center 40%;
+    mask-size: 371px 406px;
+    -webkit-mask-size: 371px 406px;
+    transition: all 0.5s ease-in-out;
+}
+
+.benefits__item:hover .benefits__description {
+    color: #fff;
+}
+.benefits__item:hover .benefits__effect {
+    color: #fff;
+}
+.benefits__image:hover {
+    mask-size: 1500px 1500px;
+    -webkit-mask-size: 1500px 1500px;
+}
+.benefits__image img {
+    position: absolute;
+    height: 100%;
+    object-fit: cover;
+}
+
+.benefits__description {
+    position: relative;
+    text-align: center;
+    font-size: 22px;
+    font-weight: 500;
+    letter-spacing: 0.858px;
+    color: #000;
+    transition: all 0.5s ease-in-out;
+    z-index: 2;
+}

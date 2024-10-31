@@ -1,0 +1,60 @@
+{% comment %}
+  Renders a mushroom product card.
+
+  Accepts:
+  - product: {Object} Product Liquid object to be rendered.
+  - background_image: {String} URL of the background image.
+  - product_image: {String} URL of the product image.
+  - product_title: {String} Custom title for the product. Defaults to the product title if not provided.
+  - product_description: {String} Custom description for the product. Defaults to the product description if not provided.
+  - add_to_cart_text: {String} Custom text for the add to cart button. Default is "Add to Cart".
+  - shop_now_text: {String} Custom text for the shop now button. Default is "Shop Now".
+
+  Usage:
+  {% render 'mushroom-product', 
+            product: collections[block.settings.selected_product], 
+            background_image: block.settings.background_image, 
+            product_image: block.settings.product_image, 
+            product_title: block.settings.product_title, 
+            product_description: block.settings.product_description,
+			shop_now_text: section.settings.shop_now_text,
+			add_to_cart_text: section.settings.add_to_cart_text %}
+{% endcomment %}
+
+<div class="mushrooms-menu__item">
+  <div class="mushroom__bg">
+    <img src="{{ background_image | img_url: 'master' }}" alt="Background Image">
+  </div>
+  <div class="mushroom-menu__content">
+    <img src="{{ product_image | img_url: 'master' }}" alt="Product Image" class="mushroom-menu__image">
+    <h3 class="mushroom__title">
+      {{ product_title | default: product.title }}
+    </h3>
+    <p class="mushroom-menu__description">
+      {{ product_description | default: product.description | strip_html | truncatewords: 20 }}
+    </p>
+    <div class="mushroom-menu__buttons">
+      <form action="/cart/add" method="post">
+        <input type="hidden" name="id" value="{{ product.variants.first.id }}">
+        <button type="submit" class="button button_purple">
+          <p class="button__name">
+            {{ add_to_cart_text }}
+          </p>
+          <div class="button__jumper"></div>
+          <div class="button__icon">
+            {% render "cross-white" %}
+          </div>
+        </button>
+      </form>
+      <a href="{{ product.url }}" class="button button_animated button_white">
+        <p class="button__name">
+          {{ shop_now_text }}
+        </p>
+        <div class="button__jumper"></div>
+        <div class="button__icon">
+          <img src="{{ 'button-icon.svg' | asset_url }}" alt="">
+        </div>
+      </a>
+    </div>
+  </div>
+</div>

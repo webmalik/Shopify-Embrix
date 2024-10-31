@@ -1,0 +1,57 @@
+.common-button{
+    display: flex;
+    flex-direction: row;
+    gap: 4px;
+    height: 80px;
+    width: 100%;
+}
+
+.common-button .button__name{
+    position: relative;
+    color: #fff;
+}
+
+.common-button .button__name::after{
+    position: absolute;
+    content: '';
+    width: 6px;
+    height: 22px;
+    right: -4px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #000;
+    transition: background-color 0.3s ease;
+}
+
+.common-button .button__icon{
+    min-width: 80px;
+    height: 100%;
+    padding: 0;
+}
+
+.common-button .button__icon img{
+    width: 52px;  
+    height: 52px; 
+}
+
+.common-button:hover .button__name{
+    background-color: var(--pink-main);
+}
+
+.common-button:hover .button__name::after{
+    background-color: var(--pink-main);
+}
+
+
+@media(max-width: 768px){
+    .common-button{
+        height: 64px;
+    }
+    .common-button .button__icon{
+        min-width: 64px;
+    }
+    .common-button .button__icon img{
+        width: 42px;  
+        height: 42px; 
+    }
+}

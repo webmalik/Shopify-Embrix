@@ -1,0 +1,72 @@
+<link rel="stylesheet" href="{{ 'close-button.css' | asset_url }}" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="{{ 'common-button.css' | asset_url }}" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="{{ 'header-cart.css' | asset_url }}" media="print" onload="this.media='all'">
+
+<script src="{{ 'quantity-popover.js' | asset_url }}" defer="defer"></script>
+<script src="{{ 'custom-cart.js' | asset_url }}" defer="defer"></script>
+
+<div class="header__cart-wrapper" style="opacity:0;">
+	<div class="cart__bg"></div>
+  <div class="cart">
+    <div class="cart__header cart__container">
+      <span>Your Cart</span>
+      <button class="cart__close close-button close-button_black">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="2.28516" y="-0.000488281" width="19.3953" height="3.23255" transform="rotate(45 2.28516 -0.000488281)" fill="black"/>
+          <rect width="19.3953" height="3.23255" transform="matrix(0.707107 -0.707107 -0.707107 -0.707107 2.28516 16)" fill="black"/>
+        </svg>
+      </button>
+    </div>
+    <div class="cart__present cart__container">
+      <p class="cart__shipping">Add $22.01 more to receive free U.S. shipping!</p>
+      <div class="cart__progress">
+		<span class="progress__line">
+			<span class="circle"></span>
+		</span>
+	  </div>
+      <img src="{{ 'present-cart.svg' | asset_url }}" alt="">
+    </div>
+    <div class="cart__goods cart__container">
+      {%- for item in cart.items -%}
+        <div class="cart__item">
+          <div class="cart__image cart__image_lions">
+            <img src="{{ item.image | image_url: width: 300 }}" alt="{{ item.image.alt | escape }}">
+          </div>
+          <div class="cart__info">
+            <div class="cart__info-head">
+              <span class="cart__name">{{ item.product.title | escape }}</span>
+              <button class="cart__item-close close-button" data-variant-id="{{ item.variant.id }}">
+                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <rect x="2.28516" y="-0.000488281" width="19.3953" height="3.23255" transform="rotate(45 2.28516 -0.000488281)" fill="black"/>
+                  <rect width="19.3953" height="3.23255" transform="matrix(0.707107 -0.707107 -0.707107 -0.707107 2.28516 16)" fill="black"/>
+                </svg>
+              </button>
+            </div>
+            <div class="cart__item-footer">
+              <div class="cart__item-number">
+                <button class="quantity__button" name="minus" type="button" data-variant-id="{{ item.variant.id }}">&mdash;</button>
+                <span>{{ item.quantity }}</span>
+                <button class="quantity__button" name="plus" type="button" data-variant-id="{{ item.variant.id }}">+</button>
+              </div>
+              <span class="cart__item-price">{{ item.final_line_price | money }}</span>
+            </div>
+          </div>
+        </div>
+      {%- endfor -%}
+    </div>
+    <footer class="cart__footer cart__container">
+      <div class="cart__total">
+        <h3>subtotal:</h3>
+        <span>{{ cart.total_price | money }}</span>
+      </div>
+      <form action="/checkout" method="post">
+        <button class="common-button cart__checkout-button button_animated" type="submit">
+          <span class="button__name">checkout</span>
+          <div class="button__icon">
+            <img src="{{ 'button-icon.svg' | asset_url }}" alt="">
+          </div>
+        </button>
+      </form>
+    </footer>
+  </div>
+</div>

@@ -1,0 +1,80 @@
+<link rel="stylesheet" href="{{ 'show.css' | asset_url }}" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="{{ 'show-mobile.css' | asset_url }}" media="print" onload="this.media='all'">
+
+<section class="show">
+  <div class="_container show__container">
+    <h2 class="show__heading">
+      {{ section.settings.section_heading }}
+    </h2>
+    <div class="show__items">
+      {% for block in section.blocks %}
+        {% if block.type == 'show_item' %}
+          <div class="show__item">
+            <h3 class="show__title">
+              {{ block.settings.item_title }}
+            </h3>
+            <img src="{{ block.settings.item_image | img_url: 'master' }}" alt="" class="show__image">
+            <p class="show__text">
+              {{ block.settings.item_text }}
+            </p>
+          </div>
+        {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Show Section",
+  "settings": [
+    {
+      "type": "text",
+      "id": "section_heading",
+      "label": "Section Heading",
+      "default": "We’re here to show"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "show_item",
+      "name": "Show Item",
+      "settings": [
+        {
+          "type": "text",
+          "id": "item_title",
+          "label": "Item Title",
+          "default": "THE"
+        },
+        {
+          "type": "image_picker",
+          "id": "item_image",
+      "label": "Item Image"
+        },
+        {
+          "type": "text",
+          "id": "item_text",
+          "label": "Item Text",
+          "default": "New generation of food additives"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Show Section",
+	  "blocks": [
+        {
+          "type": "show_item"
+        },
+        {
+          "type": "show_item"
+        },
+        {
+          "type": "show_item"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
